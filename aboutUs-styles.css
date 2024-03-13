@@ -1,0 +1,21 @@
+:root{
+    --color_background:#F9F8FF;
+    --color_heFoo:#CAC9F2;
+    --color_buttons:#7A88F2;
+    --color_input:#DBEFFB;
+}
+.img-profile{
+    height: 100px;
+    width: 100px;
+}
+
+a{
+    text-decoration: none;
+}
+
+h1, h3, p, a{
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+}
