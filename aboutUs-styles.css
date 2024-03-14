@@ -4,6 +4,7 @@
     --color_buttons:#7A88F2;
     --color_input:#DBEFFB;
 }
+
 .img-profile{
     height: 100px;
     width: 100px;
@@ -19,9 +20,7 @@ h1, h3, p, a{
     font-weight: weight;
     font-style: normal;
 }
-.description{
-    text-align: justify;/* justifica el texto de la descripcion */
-}
+
 
 .card-hover {
     transition: transform 0.4s ease; /* Transicion suave de 0.4 segundos en la tarjeta */
