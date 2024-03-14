@@ -19,3 +19,16 @@ h1, h3, p, a{
     font-weight: weight;
     font-style: normal;
 }
+.description{
+    text-align: justify;/* justifica el texto de la descripcion */
+}
+
+.card-hover {
+    transition: transform 0.4s ease; /* Transicion suave de 0.4 segundos en la tarjeta */
+    cursor: pointer;  /* Se activa cuando el cursos esta sobre la tarjeta  */
+    display: block;  /* Hace que cada tarjeta se un bloque  */
+    margin: 0 auto;  /* Centra la imagen si no ocupa todo el ancho del contenedor  */
+}
+.card-hover:hover {
+    transform: scale(1.05); /* Controla la escala para el efecto de la imagen */
+}
