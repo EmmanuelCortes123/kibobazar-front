@@ -19,3 +19,16 @@ h1, h3, p, a{
     font-weight: weight;
     font-style: normal;
 }
+.description{
+    text-align: justify;
+}
+
+.card-hover {
+    transition: transform 0.3s ease; /* Asegura una transición suave */
+    cursor: pointer;  /* Cambia el cursor para indicar interactividad  */
+    display: block;  /* Asegura que la imagen no tenga margen extra alrededor  */
+    margin: 0 auto;  /* Centra la imagen si no ocupa todo el ancho del contenedor  */
+}
+.card-hover:hover {
+    transform: scale(1.05); /* Ajusta este valor para controlar cuánto se amplía la imagen */
+}
