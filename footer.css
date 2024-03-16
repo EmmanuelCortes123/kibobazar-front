@@ -1,0 +1,23 @@
+a {
+    text-decoration: none;
+    color: black;
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+}
+
+a:hover{
+    color: #FF66C4;
+}
+
+p{
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal; 
+}
+
+.iconos{
+    margin-left: 20px;
+}
