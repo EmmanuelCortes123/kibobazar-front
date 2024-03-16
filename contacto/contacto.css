@@ -1,0 +1,15 @@
+body{
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+}
+
+.form-control{
+    background-color: #DBEFFB;
+}
+
+.btn{
+    background-color: #7A88F2;
+    border-radius: 25px;
+}
