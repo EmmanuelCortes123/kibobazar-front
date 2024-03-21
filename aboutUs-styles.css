@@ -35,3 +35,7 @@ h1, h3, p, a{
 .card-hover:hover {
     transform: scale(1.05); /* Controla la escala para el efecto de la imagen */
 }
+
+.text-bg{
+    background-color: #7A88F2;
+}
