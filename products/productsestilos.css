@@ -1,0 +1,33 @@
+body {
+    font-family: 'Playfair Display', serif;
+}
+
+.header, .footer {
+    background-color: #CAC9F2;
+}
+
+.iconos {
+    width: 25px;
+    height: 25px;
+}
+
+.nav-link {
+    color: white;
+}
+
+.nav-link:hover {
+    color: #7A88F2;
+}
+
+.btn-outline-light {
+    background-color: #7A88F2;
+    border-color: #7A88F2;
+}
+
+.btn-outline-light:hover {
+    background-color: white;
+    color: #7A88F2;
+    border-color: #7A88F2;
+}
+
+/* Agrega más estilos personalizados aquí según sea necesario */
