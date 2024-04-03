@@ -1,4 +1,4 @@
-
+/*
  function crear( nombre, talla, imagen, material, categoria, descripcion, medida, precio ) {
     const producto = {
         nombre: nombre,
@@ -10,11 +10,11 @@
         medidad: medida,
         precio: precio
     };
-  return producto
+    return JSON.stringify(producto);
 };
 
-const ejemploUno = crear("Camiseta", "M","Imagen","Algodon","Jersey", "Una bonita camiseta de color azul.", "32" , "$500");
-const ejemploDos = crear("Pantalon", "M","Imagen","Tela","Pantalones", "Un bonito pantalon color azul.", "30" , "$250");
+let ejemploUno = crear("Camiseta", "M","Imagen","Algodon","Jersey", "Una bonita camiseta de color azul.", "32" , "$500");
+let ejemploDos = crear("Pantalon", "M","Imagen","Tela","Pantalones", "Un bonito pantalon color azul.", "30" , "$250");
 const ejemploTres = crear("Calcetas", "S","Imagen","Algodon","Calcetas", "Calcetas color blanco.", "28" , "$150");
 const ejemploCuatro = crear("Falda", "G","Imagen","Mezclilla","Faldas", "Falda tipo mezclilla", "26" , "$300");
 const ejemploCinco = crear("Gorra", "S","Imagen","Algodon","Gorras", "Gorra del equipo NewYork", "28" , "$150");
@@ -35,20 +35,82 @@ console.log(ejemploOcho);
 console.log(ejemploNueve);
 console.log(ejemploDiez);
 
-/*
+// --------------------------------------------------
 
- function modificar() {
-    
-};
-
- function eliminar() {
-    
-};
-
- function eliminarTodo() {
-    
-};
+function crear(nombre, talla, imagen, material, categoria, descripcion, medida, precio) {
+    const producto = {
+        nombre: nombre,
+        talla: talla,
+        imagen: imagen,
+        material: material,
+        categoria: categoria,
+        descripcion: descripcion,
+        medida: medida,
+        precio: precio
+    };
+    return producto;
+}
 */
+
+function crear(nombre, talla, imagen, material, categoria, descripcion, medida, precio) {
+    const producto = {
+        nombre: nombre,
+        talla: talla,
+        imagen: imagen,
+        material: material,
+        categoria: categoria,
+        descripcion: descripcion,
+        medida: medida,
+        precio: precio
+    };
+    return producto;
+}
+
+let ejemploUno = crear("Camiseta", "M","Imagen","Algodon","Jersey", "Una bonita camiseta de color azul.", "32" , "$500");
+let ejemploDos = crear("Pantalon", "M","Imagen","Tela","Pantalones", "Un bonito pantalon color azul.", "30" , "$250");
+
+
+function eliminarProducto(nombreVariable) {
+    // Se establece la variable como null
+    eval(${nombreVariable} = null);
+    console.log("Producto eliminado exitosamente.");
+}
+
+console.log("Producto 1:", ejemploUno);
+console.log("Producto 2:", ejemploDos);
+
+eliminarProducto("ejemploUno");
+
+console.log("Producto 1 después de eliminar:", ejemploUno);
+console.log("Producto 2 después de eliminar:", ejemploDos);
+
+/*
+// Eliminar un producto
+
+function leerProductos(callback) {
+    fs.readFile(archivoProductos, 'utf8', (err, data) => {
+      if (err) {
+        console.error('Error al leer el archivo:', err);
+        return;
+      }
+      let productos = JSON.parse(data);
+      callback(productos);
+    });
+  }
+
+function eliminarProducto(nombreProducto) {
+    leerProductos(productos => {
+      let
+  productosFiltrados = productos.filter(producto => producto.nombre !== nombreProducto);
+      guardarProductos(productosFiltrados);
+      console.log(`Producto "${nombreProducto}" eliminado correctamente.`);
+    });
+  }
+
+  console.log(eliminarProducto(ejemploUno));
+
+*/
+
 
 /*  const itemsDeRopa = [
   { name: "Vestido", color: "Rojo", size: "Grande", img: "https://picsum.photos/100" },
