@@ -1,8 +1,102 @@
-let publicaciones = [];
+
+// Función para crear un objeto producto con las propiedades especificadas.
+function crearProducto(name, image, category, material, size, description, measurement, price) {
+    // Creando un nuevo objeto producto con las propiedades recibidas como parámetros
+    var producto = {
+      name: name,               // Nombre del producto
+      image: image,             // Imagen o ruta de la imagen del producto
+      category: category,       // Categoría a la que pertenece el producto
+      material: material,       // Material del producto
+      sizes: size,              // Tallas disponibles para el producto
+      description: description, // Descripción del producto
+      measurements: measurement, // Medidas del producto
+      price: price              // Precio del producto
+    };
+    
+    // Devuelve el objeto producto creado.
+    return producto;
+  }
+  
+  // Función para guardar un producto en el almacenamiento local del navegador.
+  function guardarProducto(producto) {
+    // Obtener la lista de productos actual del almacenamiento local.
+    let productos = localStorage.getItem('productos');
+    // Si hay productos ya almacenados, los parseamos, si no, iniciamos un array vacío.
+    productos = productos ? JSON.parse(productos) : [];
+  
+    // Añadimos el nuevo producto al array de productos existente.
+    productos.push(producto);
+  
+    // Guardamos la lista de productos actualizada en el almacenamiento local.
+    // Convertimos el array de productos a una cadena JSON.
+    localStorage.setItem('productos', JSON.stringify(productos));
+  
+    // Informamos en la consola que el producto se guardó correctamente.
+    console.log('Producto guardado correctamente.');
+  }
+  
+  // Función para obtener la lista de productos en formato JSON del almacenamiento local.
+  function obtenerProductosJSON() {
+    // Obtenemos la lista de productos del almacenamiento local.
+    let productos = localStorage.getItem('productos');
+    
+    // Si hay productos, los retornamos como una cadena JSON, si no, retornamos un array vacío en formato JSON.
+    return productos ? productos : '[]';
+  }
+  
+  // Ejemplo de uso de las funciones
+  // Creación de un nuevo producto con datos de ejemplo
+  var nuevoProducto = crearProducto(
+    'Camiseta',
+    'imagen_camiseta.png',
+    'Ropa',
+    'Algodón',
+    ['S', 'M', 'L'],
+    'Camiseta de algodón con estampado',
+    '32x28',
+    '$19.99'
+  );
+  
+  // Guarda el producto en el almacenamiento local
+  guardarProducto(nuevoProducto);
+  
+  // Imprime la lista de productos en formato JSON en la consola
+  console.log(obtenerProductosJSON());
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*let publicaciones = [];
 
 // función agregarPublicacion
 function agregarPublicacion(name, image, category, material, size, description, measurement, price) {
-    let nuevaPublicacion = {
+    let producto = {
         name: name,
         image: image,
         category: category,
@@ -12,7 +106,16 @@ function agregarPublicacion(name, image, category, material, size, description, 
         measurements: measurement,
         price: price
     };
-    publicaciones.push(nuevaPublicacion);
+    publicaciones.push(producto);
+    
+}
+
+// Función para guardar un producto en el almacenamiento local del navegador.
+function guardarProducto(producto) {
+    // Obtener la lista de productos actual del almacenamiento local.
+    let productos = localStorage.getItem('productos');
+    // Si hay productos ya almacenados, los parseamos, si no, iniciamos un array vacío.
+    productos = productos ? JSON.parse(productos) : [];
 }
 
 // Función para borrar una publicación
