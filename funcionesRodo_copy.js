@@ -182,7 +182,7 @@ function renderizarProductos() {
             <h5 class="card-title">${producto.name}</h5>
             <p class="card-text">${producto.description}</p>
             <p class="card-text">Precio: ${producto.price}</p>
-            <button onclick="borrarPublicacion(${indice})" class="btn btn-danger">Eliminar</button>
+            <!-- <button onclick="borrarPublicacion(${indice})" class="btn btn-danger">Eliminar</button> -->
             <!-- Aquí puedes agregar más botones o información -->
           </div>
         </div>
