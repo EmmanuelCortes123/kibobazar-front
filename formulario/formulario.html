@@ -73,6 +73,15 @@
 
     <h1 class="text-center mt-4" >Formulario de producto</h1>
     <p class="text-center mt-4">Formulario de creación y modificación de productos.</p>
+    <div id="alerta" class="alert alert-danger alert-dismissible fade show" role="alert" style="display: none;">
+  <strong>Error:</strong> Por favor, completa todos los campos obligatorios.
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+<div id="alertaCorrecta" class="alert alert-success alert-dismissible fade show" role="alert" style="display: none;">
+  <strong>Correcto:</strong> Formulario enviado con exito
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+
     <main class="container mt-5">
         <div class="row justify-content-center text-center"> 
             <div class="col-md-12">
@@ -85,16 +94,16 @@
                         <div class="row">
                           <div class="col-md-6">
                             <label for="nombre" class="form-label">Nombre</label>
-                            <input type="text" class="form-control" id="nombre" name="nombre">
+                            <input type="text" class="form-control " id="nombre" name="nombre"  >
                           </div>
                           <div class="col-md-6">
-                            <label for="tallas" class="form-label">Tallas</label>
+                            <label for="tallas form-label">Tallas</label>
                             <input type="text" class="form-control" id="tallas" name="tallas">
                           </div>
                         </div>
                         <div class="row my-3">
                           <div class="col-md-6">
-                            <label for="imagen" class="form-label">Imagen</label>
+                            <label for="imagen"  class="form-label">Imagen</label>
                             <input type="file" class="form-control" id="imagen" name="imagen">
                           </div>
                           <div class="col-md-6">
@@ -104,7 +113,7 @@
                         </div>
                         <div class="row my-3">
                           <div class="col-md-6">
-                            <label for="categoria" class="form-label">Categoría</label>
+                            <label for="categoria"  class="form-label">Categoría</label>
                             <select class="form-select" id="categoria" name="categoria">
                               <option value="">Seleccionar...</option>
                               <option value="mujer">Mujer</option>
@@ -127,7 +136,7 @@
                             <input type="number" class="form-control" id="precio" name="precio">
                           </div>
                         </div>
-                        <button type="submit" class="btn btn-primary mt-3">Crear Producto</button>
+                        <button id="formulario-producto" type="submit" class="btn btn-primary mt-3" >Crear Producto</button>
                       </form>
                     </div>
                   </div>
@@ -137,7 +146,8 @@
         </div>
     </main>
 
-    <script src=""></script>
+    <script src="formulario.js"></script>
+    <script src="../funcionesRodo_copy.js"></script>
 </body>
 <footer class="footer text-dark mt-4 " style="background-color: #CAC9F2;">
   <div class="container ">
