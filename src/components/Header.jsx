@@ -36,10 +36,13 @@ function Header() {
                                 <li className="nav-item">
                                     <NavLink className="nav-link" to="/aboutUs">ABOUT US</NavLink>
                                 </li>
+                                <li className="nav-item">
+                                    <NavLink className="nav-link" to="/formulario">FORMULARIO</NavLink>
+                                </li>
                                 <li className="nav-item dropdown">
-                                    <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <NavLink className="nav-link dropdown-toggle" to="/products" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                         PRODUCTS
-                                    </a>
+                                    </NavLink>
                                     <ul className="dropdown-menu">
                                         <li><a className="dropdown-item" href="#">Action</a></li>
                                         <li><a className="dropdown-item" href="#">Another action</a></li>
