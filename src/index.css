@@ -1,22 +1,19 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+*{
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
 
 :root{
   --color_background:#F9F8FF;
   --color_heFoo:#CAC9F2;
   --color_buttons:#7A88F2;
   --color_input:#DBEFFB;
+}
+ .nav-link {
+  font-size: 18px;
 }
 
 .img-profile{
@@ -56,4 +53,11 @@ h1, h3, p, a{
 
 .inpu-form{
   background-color: #DBEFFB;
+  font-size: 20px;
+}
+.form-label, .text-contact{
+  font-size: 20px;
+}
+p{
+  font-size: 20px;
 }
