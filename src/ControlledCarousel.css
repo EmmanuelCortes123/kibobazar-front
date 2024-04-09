@@ -1,0 +1,13 @@
+/* Estilos para el carrusel */
+.carousel-item img {
+    
+    width: 100%; /* Las imágenes ocupan todo el ancho del contenedor del carrusel */
+    object-fit: cover; /* Cubre el área del contenedor del carrusel sin distorsionarse */
+    min-height: 400px; /* Establece una altura mínima para las imágenes */
+    justify-content: center;
+  }
+  
+  .carousel-item {
+    height: 400px; /* Ajusta esto según la altura que prefieras para tu carrusel */
+  }
+  
