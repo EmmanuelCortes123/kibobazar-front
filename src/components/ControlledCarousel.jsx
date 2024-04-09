@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import Carousel from 'react-bootstrap/Carousel';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import '../ControlledCarousel.css';
-
+import '../ControlledCarousel.css'; // Asegúrate de que la ruta es correcta
 
 function ControlledCarousel() {
   const [index, setIndex] = useState(0);
@@ -11,41 +10,29 @@ function ControlledCarousel() {
     setIndex(selectedIndex);
   };
 
+  // Aquí tienes un array que contiene arrays de URLs de imágenes para cada slide
+  const slides = [
+    ["https://picsum.photos/800/400?random=1", "https://picsum.photos/800/400?random=2", "https://picsum.photos/800/400?random=3", "https://picsum.photos/800/400?random=4", "https://picsum.photos/800/400?random=5"],
+    ["https://picsum.photos/800/400?random=6", "https://picsum.photos/800/400?random=7", "https://picsum.photos/800/400?random=8", "https://picsum.photos/800/400?random=9", "https://picsum.photos/800/400?random=10"],
+    // ... y así sucesivamente para los demás slides
+  ];
+
   return (
-    <Carousel activeIndex={index} onSelect={handleSelect}>
-      <Carousel.Item>
-        <img
-          className="d-block img-fluid"
-          src="https://picsum.photos/800/400?random=1"
-          alt="First slide"
-        />
-        <Carousel.Caption>
-          <h3>First slide label</h3>
-          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-        </Carousel.Caption>
-      </Carousel.Item>
-      <Carousel.Item>
-        <img
-          className="d-block img-fluid"
-          src="https://picsum.photos/800/400?random=2"
-          alt="Second slide"
-        />
-        <Carousel.Caption>
-          <h3>Second slide label</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </Carousel.Caption>
-      </Carousel.Item>
-      <Carousel.Item>
-        <img
-          className="d-block img-fluid"
-          src="https://picsum.photos/800/400?random=3"
-          alt="Third slide"
-        />
-        <Carousel.Caption>
-          <h3>Third slide label</h3>
-          <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-        </Carousel.Caption>
-      </Carousel.Item>
+    <Carousel activeIndex={index} onSelect={handleSelect} interval={3000}>
+      {slides.map((slide, idx) => (
+        <Carousel.Item key={idx}>
+          <div className="slide-content">
+            {slide.map((image, index) => (
+              <img
+                key={index}
+                className="d-block img-fluid"
+                src={image}
+                alt={`Slide image ${index}`}
+              />
+            ))}
+          </div>
+        </Carousel.Item>
+      ))}
     </Carousel>
   );
 }
