@@ -1,11 +1,45 @@
-body{
+body {
     font-family: "Playfair Display", serif;
-    font-optical-sizing: auto;
-    font-weight: weight;
-    font-style: normal;
+
 }
 
 .iconos {
     width: 25px;
     height: 25px;
+}
+
+.slide-content {
+    display: flex;
+    justify-content: center;
+}
+  
+.slide-content img {
+    margin: 0 4px; 
+    width: 30%; 
+    max-height: 500px; 
+    object-fit: cover; 
+}
+  
+
+.banner img {
+    width: 100%; /* Asegura que la imagen del banner se ajuste al ancho del contenedor */
+    max-height: 300px; /* Establece una altura máxima para el banner */
+    object-fit: cover; /* Asegura que la imagen cubra el espacio sin estirarse */
+}
+
+/* Estilos para el carrusel */
+.carousel-item img {
+    width: auto; /* Mantiene la anchura de la imagen basada en su tamaño original */
+    max-height: 300px; /* Establece una altura máxima para las imágenes del carrusel */
+    object-fit: cover; /* Asegura que la imagen cubra el espacio asignado sin estirarse */
+}
+
+
+#controlledCarousel {
+    margin-top: 20px; /* Espacio arriba del carrusel */
+}
+
+.banner {
+    margin-bottom: 30px; /* Añade un espacio debajo del banner */
+
 }
