@@ -39,3 +39,8 @@ h1, h3, p, a{
 .text-bg{
     background-color: #7A88F2;
 }
+
+.iconos {
+    width: 25px;
+    height: 25px;
+}
