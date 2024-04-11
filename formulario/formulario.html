@@ -41,24 +41,20 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                   <ul class="navbar-nav ms-auto me-auto">
                     <li class="nav-item">
-                      <a class="nav-link" aria-current="page" href="../home/home.html">HOME</a>
+                      <a class="nav-link" aria-current="page" href="../home/home.html">INICIO</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="../contacto/contacto.html">CONTACT</a>
+                      <a class="nav-link" href="../contacto/contacto.html">CONTACTO</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="../index.html">ABOUT US</a>
+                      <a class="nav-link" href="../index.html">NOSOTROS</a>
                     </li>
                      <li class="nav-item">
-                      <a class="nav-link" href="../formulario/formulario.html">formulario</a>
+                      <a class="nav-link" href="../formulario/formulario.html">FORMULARIO</a>
                     </li>
-                      <li class="nav-item">
-                      <a class="nav-link" href="../index.html">formulario</a>
+                    <li class="nav-item">
+                      <a class="nav-link" href="../products/productos.html">PRODUCTOS</a>
                     </li>
-                    <li class="nav-item dropdown">
-                      <a class="nav-link dropdown-toggle" href="../products/products.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        PRODUCTS
-                      </a>
                       <ul class="dropdown-menu">
                         <li><a class="dropdown-item" href="#">Action</a></li>
                         <li><a class="dropdown-item" href="#">Another action</a></li>
@@ -100,21 +96,21 @@
                         <div class="row">
                           <div class="col-md-6">
                             <label for="nombre" class="form-label">Nombre</label>
-                            <input type="text" class="form-control " id="nombre" name="nombre"  >
+                            <input type="text" class="inpu-form form-control " id="nombre" name="nombre"  >
                           </div>
                           <div class="col-md-6">
                             <label for="tallas form-label">Tallas</label>
-                            <input type="text" class="form-control" id="tallas" name="tallas">
+                            <input type="text" class="inpu-form form-control" id="tallas" name="tallas">
                           </div>
                         </div>
                         <div class="row my-3">
                           <div class="col-md-6">
                             <label for="imagen"  class="form-label">Imagen</label>
-                            <input type="file" class="form-control" id="imagen" name="imagen">
+                            <input type="TEXT" class="form-control" id="imagen" name="imagen">
                           </div>
                           <div class="col-md-6">
                             <label for="material" class="form-label">Material</label>
-                            <input type="text" class="form-control" id="material" name="material">
+                            <input type="text" class="inpu-form form-control" id="material" name="material">
                           </div>
                         </div>
                         <div class="row my-3">
@@ -129,17 +125,17 @@
                           </div>
                           <div class="col-md-6">
                             <label for="descripcion" class="form-label">Descripción del producto</label>
-                            <textarea class="form-control" id="descripcion" name="descripcion" rows="3"></textarea>
+                            <textarea class="inpu-form form-control" id="descripcion" name="descripcion" rows="3"></textarea>
                           </div>
                         </div>
                         <div class="row my-3">
                           <div class="col-md-6">
                             <label for="medidas" class="form-label">Medidas</label>
-                            <input type="text" class="form-control" id="medidas" name="medidas">
+                            <input type="text" class="inpu-form form-control" id="medidas" name="medidas">
                           </div>
                           <div class="col-md-6">
                             <label for="precio" class="form-label">Precio</label>
-                            <input type="number" class="form-control" id="precio" name="precio">
+                            <input type="number" class="inpu-form form-control" id="precio" name="precio">
                           </div>
                         </div>
                         <button id="formulario-producto" type="submit" class="btn btn-primary mt-3" >Crear Producto</button>
@@ -152,8 +148,8 @@
         </div>
     </main>
 
-    <script src="formulario.js"></script>
-    <script src="../funcionesRodo_copy.js"></script>
+    <script src="formularioActions.js"></script>
+    <script src="formularioValidations.js"></script>
 </body>
 <footer class="footer text-dark mt-4 " style="background-color: #CAC9F2;">
   <div class="container ">
@@ -161,10 +157,10 @@
           <div class="col-md-12 mt-3 text-center text-md-center ">
               <nav>
                   <ul class="list-inline">
-                      <li class="list-inline-item"><a class="text-decoration-none text-black"href="#">Home</a></li>
-                      <li class="list-inline-item"><a class="text-decoration-none text-black"  href="#">Contacto</a></li>
-                      <li class="list-inline-item"><a class="text-decoration-none text-black"  href="#">Acerca de Nosotros</a></li>
-                      <li class="list-inline-item"><a class="text-decoration-none text-black"  href="#">Catálogo</a></li>
+                      <li class="list-inline-item"><a class="text-decoration-none text-black" href="../home/home.html">Inicio</a></li>
+                      <li class="list-inline-item"><a class="text-decoration-none text-black" href="../contacto/contacto.html">Contacto</a></li>
+                      <li class="list-inline-item"><a class="text-decoration-none text-black" href="../index.html">Nosotros</a></li>
+                      <li class="list-inline-item"><a class="text-decoration-none text-black" href="../products/productos.html">Productos</a></li>
                       <li class="list-inline-item"><a class="text-decoration-none text-black"  href="#">Preguntas Frecuentes</a></li>
                       <li class="list-inline-item"><a class="text-decoration-none text-black"  href="#">Política de privacidad</a></li>
                   </ul>
