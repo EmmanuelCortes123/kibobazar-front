@@ -17,7 +17,7 @@
         <div class="row">
           <div class="col-md-12 col-12" style="background-color: #CAC9F2;">
             <div class="col-md-12 mt-3 text-end text-md-end" style="background-color: #CAC9F2;">
-              <a class="icon-link col-md text-decoration-none" href="#">
+              <a class="icon-link col-md text-decoration-none" href="../login/login.html">
                 <img class="iconos m-2" src="../assets/img/icono-login.png" width="25" height="25">
                 </img>
               </a>
@@ -73,6 +73,29 @@
             </nav>
         </div>
       </header>
+ <h2>Iniciar sesión</h2>
+    <form id="loginForm">
+        <label for="username">Nombre de usuario:</label>
+        <input type="text" id="username" required><br><br>
+        <label for="password">Contraseña:</label>
+        <input type="password" id="password" required><br><br>
+        <button type="submit">Iniciar sesión</button>
+        
+    </form>
+
+    <div id="userInfo" style="display: none;">
+        <h2>Bienvenido, <span id="loggedInUser"></span>!</h2>
+        
+  <span id="loggedInUser"></span>
+  <button id="logoutButton">Cerrar sesión</button>
+    </div>
+
+    
+
+
+
+    <script src="./login.js"></script>
+
 </body>
 <footer class="footer text-dark mt-4 " style="background-color: #CAC9F2;">
   <div class="container ">
