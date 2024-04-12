@@ -1,0 +1,11 @@
+body{
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+}
+
+.iconos {
+    width: 25px;
+    height: 25px;
+}

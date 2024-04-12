@@ -4,6 +4,7 @@
     --color_buttons:#7A88F2;
     --color_input:#DBEFFB;
 }
+
 .img-profile{
     height: 100px;
     width: 100px;
@@ -18,4 +19,28 @@ h1, h3, p, a{
     font-optical-sizing: auto;
     font-weight: weight;
     font-style: normal;
+}
+
+.description{
+    text-align: justify;
+}
+
+
+.card-hover {
+    transition: transform 0.4s ease; /* Transicion suave de 0.4 segundos en la tarjeta */
+    cursor: pointer;  /* Se activa cuando el cursos esta sobre la tarjeta  */
+    display: block;  /* Hace que cada tarjeta se un bloque  */
+    margin: 0 auto;  /* Centra la imagen si no ocupa todo el ancho del contenedor  */
+}
+.card-hover:hover {
+    transform: scale(1.05); /* Controla la escala para el efecto de la imagen */
+}
+
+.text-bg{
+    background-color: #7A88F2;
+}
+
+.iconos {
+    width: 25px;
+    height: 25px;
 }

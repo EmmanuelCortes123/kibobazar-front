@@ -1,0 +1,25 @@
+body{
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+}
+
+.inpu-form{
+    background-color: #DBEFFB;
+}
+
+.btn{
+    background-color: #7A88F2;
+    border-radius: 7px;
+}
+
+.imgForm{
+    width: 100%;
+    height: auto;
+}
+
+.iconos {
+    width: 25px;
+    height: 25px;
+}
