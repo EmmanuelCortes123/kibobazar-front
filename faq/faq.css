@@ -1,6 +1,7 @@
 *{
     font-family: 'Playfair Display', sans-serif;
     font-size: 16px;
+    
 }
 
 h1{
@@ -11,8 +12,7 @@ h1{
 h2{
     font-family: 'Caveat Brush', cursive;
     font-size: 26px;
-    background-color: #F6F8FF
-    ;
+
 } 
 
 p{
@@ -23,4 +23,3 @@ p{
 #faq{
     text-align: center;
 }
-
