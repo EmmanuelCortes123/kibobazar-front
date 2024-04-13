@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
             return;
         }
 
-        let registrosGuardados = JSON.parse(localStorage.getItem('registros')) || [];
+        let registrosGuardados = JSON.parse(localStorage.getItem('users')) || [];
         let correoExistente = registrosGuardados.find(function (registro) {
             return registro.correo === correo;
         });
@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         registrosGuardados.push(nuevoRegistro);
 
-        localStorage.setItem('registros', JSON.stringify(registrosGuardados));
+        localStorage.setItem('users', JSON.stringify(registrosGuardados));
 
         document.getElementById("formularioRegistro").reset();
 

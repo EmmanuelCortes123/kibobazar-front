@@ -36,27 +36,36 @@ loginForm.addEventListener("submit", function (event) {
 
   // Verificar si el usuario ya existe en la lista de usuarios
   const existingUserIndex = users.findIndex(
-    (user) => user.usuario === username
+    (user) => user.correo === username // cambie lo usuario a correo para verificar
   );
   if (existingUserIndex !== -1) {
     // El usuario ya existe, verificar si la contraseña coincide con la contraseña existente
-    if (users[existingUserIndex].contraseña !== password) {
+    if (users[existingUserIndex].contrasena !== password) { // cambie el nombre a contrasena
       alert("La contraseña ingresada no es correcta.");
       return; // Salir de la función si la contraseña no coincide
     }
   } else {
     // Agregar el nuevo usuario a la lista de usuarios
-    users.push({ usuario: username, contraseña: password });
+    //users.push({ usuario: username, contraseña: password });
     // Guardar la lista actualizada de usuarios en el localStorage
-    localStorage.setItem("users", JSON.stringify(users));
+    // localStorage.setItem("users", JSON.stringify(users));
+    alert("El usuario no está registrado.");
+    return; // Salir de la función si el usuario no está registrado
   }
 
   // Mostrar el nombre de usuario en la página después de iniciar sesión
-  loggedInUserSpan.textContent = username;
+  loggedInUserSpan.textContent = users[existingUserIndex].nombre; // cambie para que aparezca el nombre y no el correo
+  //loggedInUserSpan.textContent = username;
   // Mostrar el div que contiene la información del usuario
   userInfoDiv.style.display = "block";
   // Limpiar el formulario
   loginForm.reset();
+
+   // Redirigir al home después de 2 segundos
+   setTimeout(function () {
+    window.location.href = "../home/home.html"; // Cambia "home.html" por la URL de tu página de inicio
+  }, 2000); // 2000 milisegundos = 2 segundos
+
 });
 
 // Verificar si hay un usuario almacenado en el localStorage al cargar la página
@@ -68,7 +77,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Mostrar el nombre de usuario del primer usuario en la lista (si hay alguno)
     if (users.length > 0) {
       loggedInUserSpan.textContent = users[0].usuario;
-      userInfoDiv.style.display = "block";
+      // userInfoDiv.style.display = "block";
     }
   }
 });
@@ -76,23 +85,34 @@ document.addEventListener("DOMContentLoaded", function () {
 // Obtener referencia al botón de cerrar sesión
 const logoutButton = document.getElementById("logoutButton");
 
+/*
 // Función para manejar el evento de clic en el botón de cerrar sesión
 logoutButton.addEventListener("click", function () {
-  // Limpiar el localStorage eliminando la clave "user"
-  localStorage.removeItem("user");
+  // Limpiar el localStorage eliminando la clave "users"
+  localStorage.removeItem("users");
+
+  // Ocultar el div de información del usuario
+  userInfoDiv.style.display = "none";
+});
+*/
+
+logoutButton.addEventListener("click", function () {
+  // Establecer una bandera en el localStorage para indicar que se cerró la sesión
+  localStorage.setItem("loggedIn", "false");
 
   // Ocultar el div de información del usuario
   userInfoDiv.style.display = "none";
 });
 
+ 
 // Verificar si hay un usuario almacenado en el localStorage al cargar la página
 document.addEventListener("DOMContentLoaded", function () {
-  const storedUserJSON = localStorage.getItem("user");
+  const storedUserJSON = localStorage.getItem("users");
   if (storedUserJSON) {
     // Convertir la cadena JSON de vuelta a un objeto JavaScript
     const storedUserObject = JSON.parse(storedUserJSON);
     // Mostrar el nombre de usuario en la página si hay un usuario almacenado
     loggedInUserSpan.textContent = storedUserObject.usuario;
-    userInfoDiv.style.display = "block";
+    // userInfoDiv.style.display = "block";
   }
 });
