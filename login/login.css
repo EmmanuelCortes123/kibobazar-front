@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 body {
   font-family: "Playfair Display", serif;
   font-optical-sizing: auto;
@@ -18,3 +19,25 @@ body {
   width: 100%;
   height: auto;
 }
+=======
+body{
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+}
+
+.form-control{
+    background-color: #DBEFFB;
+}
+
+.btn{
+    background-color: #7A88F2;
+    border-radius: 7px;
+}
+
+.imgForm{
+    width: 100%;
+    height: auto;
+}
+>>>>>>> c3cea77b26c925b5dc7e87eb51d62714caaa8639
