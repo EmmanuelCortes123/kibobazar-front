@@ -4,6 +4,7 @@ import Contact from "../pages/Contact"
 import Formulario from "../pages/Formulario";
 import Home from "../pages/Home";
 import Products from "../pages/Products";
+import Questions from "../pages/Questions";
 function AppRouter() {
     return (
         <Routes>
@@ -12,6 +13,7 @@ function AppRouter() {
             <Route path="/contact" element={<Contact/>}/>
             <Route path="/formulario" element={<Formulario/>}/>
             <Route path="/products" element={<Products/>}/>
+            <Route path="/questions" element={<Questions/>}/>
             <Route path="/" element={<Navigate to= "home"/>}/>
         </Routes>
      );
