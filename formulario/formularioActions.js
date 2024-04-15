@@ -493,18 +493,23 @@ function renderizarProductos() {
 
   publicaciones.forEach((producto, indice) => {
     const tarjetaProducto = `
-      <div class="col-sm-4 mb-4">
-        <div class="card">
-          <img src="${producto.imagen}" class="card-img-top" alt="${producto.nombre}">
-          <div class="card-body">
-            <h5 class="card-title">${producto.nombre}</h5>
-            <p class="card-text">${producto.descripcion}</p>
-            <p class="card-text">Precio: ${producto.precio}</p>
-            <button onclick="borrarProducto(${indice})" class="btn btn-danger">Eliminar</button> 
-            <!-- Aquí puedes agregar más botones o información -->
-          </div>
-        </div>
-      </div>
+<div class="col-sm-4 mb-4">
+  <div class="card h-100 border-0">
+    <img src="${producto.imagen}" class="card-img-top" alt="${producto.nombre}">
+    <div class="card-body">
+      <h5 class="card-title">${producto.nombre}</h5>
+      <p class="card-text">${producto.descripcion}</p>
+      <p class="card-text">Precio: ${producto.precio}</p>
+    </div>
+    <div class="card-footer">
+      <button onclick="borrarProducto(${indice})" class="btn btn-danger">Eliminar</button>
+      <!-- Aquí puedes agregar más botones o información -->
+    </div>
+    <div class="overlay"></div>
+  </div>
+</div>
+
+
     `;
     contenedorProductos.innerHTML += tarjetaProducto;
   });
