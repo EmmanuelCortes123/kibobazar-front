@@ -21,11 +21,21 @@ body {
 	transform: scale(1.05);
 }
 
+.clasbutton{
+	background-color:transparent;
+	border-bottom: transparent;
+	border-left: transparent;
+	border-right: transparent;
+	border-top: transparent;
+	
+}
+
+
 .counter-favorite,
 .counter-cart {
 	font-size: 10px;
-	position: absolute;
-	background-color: orange;
+	
+	background-color: rgb(36, 137, 178);
 	color: #000;
 	font-weight: 700;
 	width: 20px;

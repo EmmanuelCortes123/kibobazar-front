@@ -39,8 +39,11 @@
 						<img class="iconos m-2" src="../assets/img/carrito.png" width="25" height="25">
 					  </img>
 					  </a>
-					  <a class="icon-link" href="#">
-						<img class="iconos m-2" src="../assets/img/fav.png" width="25" height="25">
+					  <a class="icon-link clasbutton" href="#">
+						<button class="clasbutton" id="">
+							<img class="iconos m-2" src="../assets/img/fav.png" width="25" height="25">
+							<span class="counter-favorite">0</span>
+						</button>
 					  </a>
 				  </div>
 				  </div>
@@ -61,20 +64,14 @@
 							  <a class="nav-link" href="../contacto/contacto.html">CONTACTO</a>
 							</li>
 							<li class="nav-item">
-							  <a class="nav-link" href="./index.html">NOSOTROS</a>
+							  <a class="nav-link" href="../index.html">NOSOTROS</a>
 							</li>
 							 <li class="nav-item">
 							  <a class="nav-link" href="../formulario/formulario.html">FORMULARIO</a>
 							</li>
-							<li class="nav-item dropdown">
-							  <a class="nav-link dropdown-toggle" href="../products/products.html" role="button" data-bs-toggle="dropdown" aria-expanded="false"> PRODUCTOS							  </a>
-							  <ul class="dropdown-menu">
-								<li><a class="dropdown-item" href="#">Action</a></li>
-								<li><a class="dropdown-item" href="#">Another action</a></li>
-								<li><hr class="dropdown-divider"></li>
-								<li><a class="dropdown-item" href="#">Something else here</a></li>
-							  </ul>
-							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="../favoritos/favoritos.html">PRODUCTOS</a>
+							  </li>
 						  </ul>
 						  <form class="d-flex position-static" role="Buscador">
 							<input class="form-control me-2" type="Buscador" placeholder="Buscador" aria-label="Buscador">
@@ -90,17 +87,6 @@
 		
 	</body>
 			<a href="#"></a>
-
-			<div class="menu-header">
-				<button id="button-header-favorite">
-					<i class="fa-solid fa-heart"></i>
-					<span class="counter-favorite">0</span>
-				</button>
-				<button>
-					<i class="fa-solid fa-bag-shopping"></i>
-					<span class="counter-cart">0</span>
-				</button>
-			</div>
 
 			<div class="container-list-favorites">
 				<div class="header-favorite">
