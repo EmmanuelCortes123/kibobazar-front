@@ -1,9 +1,14 @@
 // Arreglo global que contendrá los productos
 let publicaciones = JSON.parse(localStorage.getItem("productos")) || [];
+let favorit = JSON.parse(localStorage.getItem("favorite")) || [];
 
 function inicializarProductos() {
   renderizarProductos(); // Solo renderiza los productos existentes en Local Storage al inicializar
 }
+
+const updateFavoritesInLocalStorage = () => {
+	localStorage.setItem('favorites', JSON.stringify(favorites));
+};
 
 function crearProducto(name, image, category, material, sizes, description, measurements, price) {
   let producto = { name, image, category, material, sizes, description, measurements, price };
@@ -28,28 +33,7 @@ function modificarProducto(i, name, image, category, material, sizes, descriptio
   }
 }
 
-function renderizarProductos() {
-  const contenedorProductos = document.getElementById("contenedorProductos");
-  contenedorProductos.innerHTML = ""; // Limpia el contenedor de productos antes de renderizar
-
-  publicaciones.forEach((producto, indice) => {
-    const tarjetaProducto = `
-      <div class="col-sm-4 mb-4">
-        <div class="card">
-          <img src="${producto.image}" class="card-img-top" alt="${producto.name}">
-          <div class="card-body">
-            <h5 class="card-title">${producto.name}</h5>
-            <p class="card-text">${producto.description}</p>
-            <p class="card-text">Precio: ${producto.price}</p>
-            <button onclick="borrarPublicacion(${indice})" class="btn btn-danger">Eliminar</button> 
-            <!-- Aquí puedes agregar más botones o información -->
-          </div>
-        </div>
-      </div>
-    `;
-    contenedorProductos.innerHTML += tarjetaProducto;
-  });
-}
+ // <button onclick="agFavorito(${indice})" class="favorite">Me gusta</button>
 
 document.addEventListener("DOMContentLoaded", inicializarProductos);
 
@@ -78,7 +62,35 @@ document.addEventListener('DOMContentLoaded', () => {
               <p class="card-text">${producto.medidas}</p>
               <p class="card-text">${producto.tallas}</p>
               <p class="card-text">${producto.precio}</p>
-              <button onclick="borrarProducto(${indice})" class="btn btn-danger">Eliminar</button>
+              
+     
+              <div class="container-buttons-card">
+
+                <button onclick ="borrarProducto(${indice})" class="cart">
+									<i class="fa-solid fa-bag-shopping"</i> X
+									
+								</button>
+
+								<button onclick="agFavorito(${indice})"  class="favorite">
+									<i
+										class="fa-regular fa-heart"
+										id="favorite-regular"
+										<abbr title="Elimiar de favoritos"  > MG</abbr>
+										
+									</i>
+									<i
+										class="fa-solid fa-heart"
+										id="added-favorite"
+									> favorito</i>
+								</button>
+
+								<button class="cart">
+									<i class="fa-solid fa-bag-shopping" <abbr title="Agregar a la bolsa">B</abbr> </i>
+									
+								</button>
+							</div>
+
+				</div>
             </div>
           </div>
         </div>`;
@@ -88,15 +100,80 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Función para borrar un producto
+
+  const updateFavoritesInLocalStorage = () => {
+    localStorage.setItem('favorite', JSON.stringify(favorit));
+  };
+
+
+ 
+  
+/////prueba 1 SE QUEDA
+ const agregarFav=(favo)=>{
+    const index= favorit.findIndex(
+      element => element.name === favo.name
+    );
+
+    console.log("el resultado de la prueba es"+index);
+    if (index > -1) {
+      favorit.splice(index, 1);
+      updateFavoritesInLocalStorage();
+    } else {
+      favorit.push(favo);
+      updateFavoritesInLocalStorage();
+    }
+
+  };
+///prueba 1 SE QUEDA
+  window.agFavorito = (indice) => {
+    let productos = JSON.parse(localStorage.getItem('productos')) || [];
+    let palabra= productos[indice].nombre;
+    let favo={
+      name:palabra,
+    };
+    agregarFav(favo);
+    renderizarProductos(); // Re-renderiza los productos después de borrar
+  };
+
+
+///propuesta 2
+  window.agregarFavorito = (indice) => {
+    let productos = JSON.parse(localStorage.getItem('productos')) || [];
+    let palabra= productos[indice].nombre;
+    let favo={
+      name:palabra,
+    };
+    favorit.push(favo);
+    localStorage.setItem('favorite', JSON.stringify(favorit));
+    renderizarProductos(); // Re-renderiza los productos después de borrar
+  };
+
+  //  el boton de borrar producto
   window.borrarProducto = (indice) => {
     let productos = JSON.parse(localStorage.getItem('productos')) || [];
     productos.splice(indice, 1);
     localStorage.setItem('productos', JSON.stringify(productos));
     renderizarProductos(); // Re-renderiza los productos después de borrar
   };
+
+//propuesta 2
+ window.borrarFavorito = (indice) => {
+    let productos = JSON.parse(localStorage.getItem('favorite')) || [];
+    productos.splice(indice, 1);
+    localStorage.setItem('favorite', JSON.stringify(productos));
+
+    renderizarProductos(); // Re-renderiza los productos después de borrar
+  };
+ 
+  
+
+
+ 
+
+
   
   // Llama a renderizarProductos al cargar la página
   renderizarProductos();
 });
+
 
