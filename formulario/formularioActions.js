@@ -448,6 +448,8 @@ function crearProductosEjemplo() {
     "Varias",
     "$450"
   );
+  
+  
   // Agrega más productos aquí si lo deseas
 }
 
@@ -475,6 +477,7 @@ function crearProducto(
   publicaciones.push(producto);
   localStorage.setItem("productos", JSON.stringify(publicaciones));
   renderizarProductos(); // Llama a renderizarProductos cada vez que creas un producto para actualizar la vista
+
 }
 
 // Función para borrar un producto
@@ -485,6 +488,9 @@ function borrarProducto(indice) {
     renderizarProductos(); // Re-renderiza los productos después de borrar
   }
 }
+
+
+
 
 // Función para renderizar los productos
 function renderizarProductos() {
@@ -501,6 +507,7 @@ function renderizarProductos() {
             <p class="card-text">${producto.descripcion}</p>
             <p class="card-text">Precio: ${producto.precio}</p>
             <button onclick="borrarProducto(${indice})" class="btn btn-danger">Eliminar</button> 
+            <button onclick="agregarAlCarrito('${producto.nombre}')" class="btn btn-primary">Agregar al carrito</button>
             <!-- Aquí puedes agregar más botones o información -->
           </div>
         </div>
@@ -512,3 +519,4 @@ function renderizarProductos() {
 
 // Llama a inicializarProductos cuando se carga la página
 document.addEventListener("DOMContentLoaded", inicializarProductos);
+

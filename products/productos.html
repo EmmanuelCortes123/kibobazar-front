@@ -21,10 +21,11 @@
             <img class="iconos m-2" src="../assets/img/icono-login.png" width="25" height="25">
             </img>
           </a>
-          <a class="icon-link col-md" href="#">
+        
+          <a class="icon-link col-md" href="#" onclick="irAlCarrito()">
             <img class="iconos m-2" src="../assets/img/carrito.png" width="25" height="25">
-          </img>
           </a>
+       
           <a class="icon-link" href="#">
             <img class="iconos m-2" src="../assets/img/fav.png" width="25" height="25">
           </a>
@@ -114,9 +115,16 @@
         </div>
     </div>
     </footer>
-    
+    <script src="../carrito/carrito.js"></script>
     <script src="../formulario/formularioActions.js"></script>
     <script src="../formulario/formularioValidations.js"></script>
+
+    
+    
+  <script>function irAlCarrito() {
+      window.location.href = "../carrito/carrito.html";
+  }</script>
+   
 
 </body>
 </html>
