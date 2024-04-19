@@ -107,7 +107,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
  
-  
+
 /////prueba 1 SE QUEDA
  const agregarFav=(favo)=>{
     const index= favorit.findIndex(
