@@ -196,3 +196,6 @@ h1, h3, p, a{
     text-align: justify;
 }
 
+.classFavoriteNow #contenedorProductos .card .card-body .container-buttons-card .favorite{
+	background-color: red;
+}
