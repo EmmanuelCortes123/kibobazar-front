@@ -175,5 +175,3 @@ document.addEventListener('DOMContentLoaded', () => {
   // Llama a renderizarProductos al cargar la página
   renderizarProductos();
 });
-
-
