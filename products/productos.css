@@ -199,3 +199,9 @@ h1, h3, p, a{
 .classFavoriteNow #contenedorProductos .card .card-body .container-buttons-card .favorite{
 	background-color: red;
 }
+
+
+.btnsNew:hover{
+background-color: #ff6666;
+box-shadow: 0 0 5px #ff6666 , 0 0 25px #ff6666, 0 0 25px #ff6666 ;
+}

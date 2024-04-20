@@ -66,14 +66,14 @@ document.addEventListener('DOMContentLoaded', () => {
      
               <div class="container-buttons-card">
 
-                <button onclick ="borrarProducto(${indice})" class="cart">
-									<i class="fa-solid fa-bag-shopping"</i> X
+                <button class="btnsNew" onclick ="borrarProducto(${indice})" >
+									<i class="laptop "</i> X
 									
 								</button>
 
 								<button onclick="agFavorito(${indice})"  class="favorite">
 									<i
-										class="fa-regular fa-heart new"
+										class="fa-regular fa-heart"
 										id="favorite-regular"
 										<abbr title="Elimiar de favoritos"  > MG</abbr>
 										
