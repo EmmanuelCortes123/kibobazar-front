@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
     productos.forEach((producto, indice) => {
       const tarjetaProducto = `
         <div class="col-sm-4 mb-4">
-          <div class="card">
+          <div class="card ">
             <img src="${producto.imagen}" class="card-img-top" alt="${producto.nombre}">
             <div class="card-body">
               <h5 class="card-title">${producto.nombre}</h5>
@@ -73,7 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 								<button onclick="agFavorito(${indice})"  class="favorite">
 									<i
-										class="fa-regular fa-heart"
+										class="fa-regular fa-heart new"
 										id="favorite-regular"
 										<abbr title="Elimiar de favoritos"  > MG</abbr>
 										
@@ -90,7 +90,6 @@ document.addEventListener('DOMContentLoaded', () => {
 								</button>
 							</div>
 
-				</div>
             </div>
           </div>
         </div>`;
@@ -107,7 +106,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
  
-
+  
 /////prueba 1 SE QUEDA
  const agregarFav=(favo)=>{
     const index= favorit.findIndex(
