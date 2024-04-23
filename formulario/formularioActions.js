@@ -150,11 +150,16 @@ document.addEventListener('DOMContentLoaded', () => {
   };
   window.agFavorito = (indice) => {
     let productos = JSON.parse(localStorage.getItem('productos')) || [];
-    let palabra= productos[indice].nombre;
-    let favo={
-      name:palabra,
-    };
+    let nombreProducto = productos[indice].nombre;
+
+  // Agregar el producto al carrito
+  let favo = {
+    name: nombreProducto,
+  };
     agregarFav(favo);
+
+    // Mostrar la alerta
+  alert(`¡"${nombreProducto}" ha sido agregado afavorito!`);
     renderizarProductos(); // Re-renderiza los productos después de borrar
   };
 
@@ -179,11 +184,17 @@ const agregarCarr=(fav)=>{
 };
 window.agCarrito = (indice) => {
   let productos = JSON.parse(localStorage.getItem('productos')) || [];
-  let palabra= productos[indice].nombre;
-  let fav={
-    name:palabra,
+  let nombreProducto = productos[indice].nombre;
+
+  // Agregar el producto al carrito
+  let fav = {
+    name: nombreProducto,
   };
   agregarCarr(fav);
+
+  // Mostrar la alerta
+  alert(`¡"${nombreProducto}" ha sido agregado al carrito!`);
+
   renderizarProductos(); // Re-renderiza los productos después de borrar
 };
 

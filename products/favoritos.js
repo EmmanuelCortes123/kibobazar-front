@@ -113,7 +113,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	}
  
   };
-  window.agCarrito = (ppp) => {
+ /* window.agCarrito = (ppp) => {
 	let productos = JSON.parse(localStorage.getItem('productos')) || [];
 	let palab= productos[ppp].nombre;
 	console.log(" el numero de agCarrito es"+palab);
@@ -123,11 +123,29 @@ document.addEventListener('DOMContentLoaded', () => {
 	};
 	agregarCarr(fav);
 	renderizarProductos(); // Re-renderiza los productos después de borrar
+  };   */
+
+  window.agCarrito = (indice) => {
+	let productos = JSON.parse(localStorage.getItem('productos')) || [];
+	let nombreProducto = productos[indice].nombre;
+  
+	// Agregar el producto al carrito
+	let fav = {
+	  name: nombreProducto,
+	};
+	agregarCarr(fav);
+  
+	// Mostrar la alerta
+	alert(`¡"${nombreProducto}" ha sido agregado al carrito!`);
+  
+	renderizarProductos(); // Re-renderiza los productos después de borrar
   };
 
  //-------------------------------------AGREGAR DESDE FAVORITOS A CARRITO----------------------------------------
 
 
+ 
+ 
  // BORRA LOS ELEMENTOS QUE YA NO ME GUSTAN
   window.borrarProducto = (indice) => {
     let favorit = JSON.parse(localStorage.getItem('favorite')) || [];
@@ -139,6 +157,4 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Llama a renderizarProductos al cargar la página
   renderizarProductosFavoritos();
-});
-
-
+}); 
