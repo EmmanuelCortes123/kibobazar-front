@@ -333,6 +333,7 @@
 //   renderizarProductosPrecargados();
 // }
 
+
 // Arreglo global que contendrá los productos
 let publicaciones = JSON.parse(localStorage.getItem("productos")) || [];
 let favorit = JSON.parse(localStorage.getItem("favorite")) || [];
@@ -348,134 +349,6 @@ function inicializarProductos() {
   renderizarProductos();
 }
 
-<<<<<<< HEAD
-// Función para crear productos de ejemplo
-function crearProductosEjemplo() {
-  crearProducto(
-    "Vestido Casual Rojo Con Flores",
-    "https://i.pinimg.com/originals/72/15/48/721548d2a9590c76e7c51bd2d1057f6b.jpg",
-    "Ropa",
-    "Algodón",
-    ["S", "M"],
-    "Marca princess polly, Seminuevo",
-    "Varias",
-    "$300"
-  );
-  crearProducto(
-    "Vestido De Noche Negro",
-    "https://i.pinimg.com/originals/75/e0/08/75e008e3c34555e568828cad06412094.jpg",
-    "Ropa",
-    "Algodón",
-    ["S", "M"],
-    "Marca Aqua, Seminuevo",
-    "Varias",
-    "$300"
-  );
-  crearProducto(
-    "Vestido Elegante Rosa Con Negro",
-    "https://i.pinimg.com/originals/49/83/7d/49837d1615d806dee14301f191a1dc6a.jpg",
-    "Ropa",
-    "Algodón",
-    ["S", "M"],
-    "Marca Olive&Alice, Seminuevo",
-    "Varias",
-    "$550"
-  );
-  crearProducto(
-    "Vestido Elegante Negro Con Manchas Blancas",
-    "https://i.pinimg.com/originals/4d/7f/d9/4d7fd9397c38722de3578916d2de90a6.jpg",
-    "Ropa",
-    "Algodón",
-    ["S", "M"],
-    "Marca Mele, Usado",
-    "Varias",
-    "$250"
-  );
-  crearProducto(
-    "Vestido Elegante Rosa Con Negro",
-    "https://i.pinimg.com/originals/d0/32/53/d032539e7b06eab008e8b7b8a8073577.jpg",
-    "Ropa",
-    "Algodón",
-    ["S", "M"],
-    "Marca Olive&Alice, Seminuevo",
-    "Varias",
-    "$550"
-  );
-  crearProducto(
-    "Short Blanco",
-    "https://i.pinimg.com/originals/7c/b0/03/7cb00303b49429c987ad9ca9a94b2a62.jpg",
-    "Ropa",
-    "Algodón",
-    ["S", "M"],
-    "Marca M7, Seminuevo",
-    "Varias",
-    "$300"
-  );
-  crearProducto(
-    "Vestido Elegante De Encaje",
-    "https://i.pinimg.com/originals/ee/81/cb/ee81cbfe2acbe749a42079037cf6c0f8.jpg",
-    "Ropa",
-    "Algodón",
-    ["S", "M"],
-    "Marca Olive&Alice, Usado",
-    "Varias",
-    "$300"
-  );
-  crearProducto(
-    "Vestido Rojo Floreado Sin Manga",
-    "https://i.pinimg.com/originals/e1/b7/78/e1b778b5f64cabbd8abafb7b747fc5f9.jpg",
-    "Ropa",
-    "Algodón",
-    ["S", "M"],
-    "Marca Zara, Seminuevo",
-    "Varias",
-    "$250"
-  );
-  crearProducto(
-    "Vestido Strapless Morado",
-    "https://i.pinimg.com/originals/26/9b/e8/269be8210b4f3c062b400e3b029fbba2.jpg",
-    "Ropa",
-    "Algodón",
-    ["S", "M"],
-    "Marca Zara, Nuevo con etiqueta",
-    "Varias",
-    "$550"
-  );
-  crearProducto(
-    "Vestido Rosa Mexicano",
-    "https://i.pinimg.com/originals/9b/4b/cd/9b4bcd2ee54e9f8554651dea93a5d5b5.jpg",
-    "Ropa",
-    "Algodón",
-    ["S", "M"],
-    "Marca Zara, Nuevo con etiqueta",
-    "Varias",
-    "$450"
-  );
-  // Agrega más productos aquí si lo deseas
-}
-
-// Función para crear un producto
-function crearProducto(
-  nombre,
-  imagen,
-  categoria,
-  material,
-  tallas,
-  descripcion,
-  medidas,
-  precio
-) {
-  let producto = {
-    nombre,
-    imagen,
-    categoria,
-    material,
-    tallas,
-    descripcion,
-    medidas,
-    precio,
-  };
-=======
 
 
 
@@ -492,46 +365,11 @@ const updateCarritoInLocalStorage = () => {
 //----------------- CREAR PRODUCTO DE PRODUCTOS
 function crearProducto(name, image, category, material, sizes, description, measurements, price) {
   let producto = { name, image, category, material, sizes, description, measurements, price };
->>>>>>> 592748cd7e1b21678549836c8a99792c9fba29e4
   publicaciones.push(producto);
   localStorage.setItem("productos", JSON.stringify(publicaciones));
   renderizarProductos(); // Llama a renderizarProductos cada vez que creas un producto para actualizar la vista
 }
 
-<<<<<<< HEAD
-// Función para borrar un producto
-function borrarProducto(indice) {
-  if (indice >= 0 && indice < publicaciones.length) {
-    publicaciones.splice(indice, 1);
-    localStorage.setItem("productos", JSON.stringify(publicaciones));
-    renderizarProductos(); // Re-renderiza los productos después de borrar
-  }
-}
-
-// Función para renderizar los productos
-function renderizarProductos() {
-  const contenedorProductos = document.getElementById("contenedorProductos");
-  contenedorProductos.innerHTML = ""; // Limpia el contenedor de productos antes de renderizar
-
-  publicaciones.forEach((producto, indice) => {
-    const tarjetaProducto = `
-      <div class="col-sm-4 mb-4">
-        <div class="card">
-          <img src="${producto.imagen}" class="card-img-top" alt="${producto.nombre}">
-          <div class="card-body">
-            <h5 class="card-title">${producto.nombre}</h5>
-            <p class="card-text">${producto.descripcion}</p>
-            <p class="card-text">Precio: ${producto.precio}</p>
-            <button onclick="borrarProducto(${indice})" class="btn btn-danger">Eliminar</button> 
-            <!-- Aquí puedes agregar más botones o información -->
-          </div>
-        </div>
-      </div>
-    `;
-    contenedorProductos.innerHTML += tarjetaProducto;
-  });
-}
-=======
 
 
 
@@ -559,12 +397,9 @@ function modificarProducto(i, name, image, category, material, sizes, descriptio
 
 
  // <button onclick="agFavorito(${indice})" class="favorite">Me gusta</button>
->>>>>>> 592748cd7e1b21678549836c8a99792c9fba29e4
 
 // Llama a inicializarProductos cuando se carga la página
 document.addEventListener("DOMContentLoaded", inicializarProductos);
-<<<<<<< HEAD
-=======
 
 
 
@@ -616,6 +451,11 @@ document.addEventListener('DOMContentLoaded', () => {
 									<i class="fa-solid fa-bag-shopping" <abbr title="Agregar a la bolsa">B</abbr> </i>
 									
 								</button>
+
+                <button onclick="verProducto(${indice})" class="btn btn-outline-light  btn-primary" style="background-color: #7A88F2;">
+                  V
+                </button>
+
 							</div>
 
 				
@@ -711,6 +551,3 @@ window.agCarrito = (indice) => {
   // Llama a renderizarProductos al cargar la página
   renderizarProductos();
 });
-
-
->>>>>>> 592748cd7e1b21678549836c8a99792c9fba29e4
