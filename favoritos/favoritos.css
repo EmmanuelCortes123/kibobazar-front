@@ -235,3 +235,7 @@ h1, h3, p, a{
     width: 25px;
     height: 25px;
 }
+
+.classFavoriteNow #contenedorProductos .card .card-body .container-buttons-card .favorite{
+	background-color: red;
+}

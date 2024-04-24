@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="./inicio.css">
+    <link rel="stylesheet" href="../home/home.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
@@ -13,23 +13,23 @@
 </head>
 <body>
     
-    <header>
-        <div class="row">
-          <div class="col-md-12 col-12" style="background-color: #CAC9F2;">
-            <div class="col-md-12 mt-3 text-end text-md-end" style="background-color: #CAC9F2;">
-              <a class="icon-link col-md text-decoration-none" href="#">
-                <img class="iconos m-2" src="../assets/img/icono-login.png" width="25" height="25">
-                </img>
-              </a>
-              <a class="icon-link col-md" href="#">
-                <img class="iconos m-2" src="../assets/img/carrito.png" width="25" height="25">
-              </img>
-              </a>
-              <a class="icon-link" href="#">
-                <img class="iconos m-2" src="../assets/img/fav.png" width="25" height="25">
-              </a>
-          </div>
-          </div>
+  <header>
+    <div class="row">
+      <div class="col-md-12 col-12" style="background-color: #CAC9F2;">
+        <div class="col-md-12 mt-3 text-end text-md-end" style="background-color: #CAC9F2;">
+          <a class="icon-link col-md text-decoration-none"href="../login/login.html">
+            <img class="iconos m-2" src="../assets/img/icono-login.png" width="25" height="25">
+            </img>
+          </a>
+          <a class="icon-link col-md" href="../products/carrito.html">
+            <img class="iconos m-2" src="../assets/img/carrito.png" width="25" height="25">
+          </img>
+          </a>
+          <a class="icon-link" aria-current="page" href="../products/favoritos.html">
+            <img class="iconos m-2" src="../assets/img/fav.png" width="25" height="25">
+          </a>
+      </div>
+      </div>
           <div class="col-md-12 col-12 text-center">
               <img src="../assets/img/logo-kibobazar.png" alt="Logo" height="80" class="d-inline-block align-top">
           </div>
@@ -41,32 +41,25 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                   <ul class="navbar-nav ms-auto me-auto">
                     <li class="nav-item">
-                      <a class="nav-link" aria-current="page" href="../home/home.html">INICIO</a>
+                      <a class="nav-link" aria-current="page" href="./inicio.html">INICIO</a>
                     </li>
                     <li class="nav-item">
                       <a class="nav-link" href="../contacto/contacto.html">CONTACTO</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="./index.html">SOBRE NOSOTROS</a>
+                      <a class="nav-link" href="../index.html">NOSOTROS</a>
                     </li>
                      <li class="nav-item">
                       <a class="nav-link" href="../formulario/formulario.html">FORMULARIO</a>
                     </li>
                     <li class="nav-item dropdown">
-                      <a class="nav-link dropdown-toggle" href="../products/products.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      <a class="nav-link" href="../products/productos.html">
                         PRODUCTOS
                       </a>
-                      <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Action</a></li>
-                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                        <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="#">Something else here</a></li>
-                      </ul>
-                    </li>
                   </ul>
                   <form class="d-flex position-static" role="search">
                     <input class="form-control me-2" type="search" placeholder="Buscador" aria-label="Buscador">
-                    <button class="btn btn-outline-light" style="background-color: #7A88F2;" type="submit">Buscador</button>
+                    <button class="btn btn-outline-light" style="background-color: #7A88F2;" type="submit">Buscar</button>
                   </form>
                 </div>
               </div>
@@ -75,30 +68,30 @@
       </header>
       <script src="./functions/funciones.js"></script>
 
-        <div class="container-fluid">
+        <div class="container-fluid mt-4">
 
     <div class="panel col-md-12 col-12 text-center container-fluid">
         <img src="../assets/img/sale..jpeg" alt="Logo"  class="d-inline-block align-top img-fluid" width="auto" height="785px">
     </div>
 
-     <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" sstyle="width: 100px;" >
-        <div class="carousel-inner container border text-center">
+     <div id="carouselExampleIndicators" class="carousel slide mt-4" data-bs-ride="carousel" sstyle="width: 100px;" >
+        <div class="carousel-inner  text-center">
             <div class="carousel-item active">
                 <img src="../assets/img/ropa1.jpeg" alt="ropa" width="300px" height="auto" class="img">
             </div>
-            <div class="carousel-item container border text-center">
+            <div class="carousel-item text-center">
                 <img src="../assets/img/ropa2.jpeg"  alt="ropa" width="300px" height="auto" class="img">
             </div>
-            <div class="carousel-item container border text-center">
+            <div class="carousel-item text-center">
                 <img src="../assets/img/ropa3.jpeg" alt="ropa" width="300px" height="auto" class="img">
             </div>
-            <div class="carousel-item container border text-center">
+            <div class="carousel-item text-center">
                 <img src="../assets/img/ropa4.jpeg" alt="ropa" width="300px" height="auto" class="img">
             </div>
-            <div class="carousel-item container border text-center">
+            <div class="carousel-item text-center">
                 <img src="../assets/img/ropa5.jpeg" alt="ropa" width="300px" height="auto" class="img">
             </div>
-            <div class="carousel-item container border text-center">
+            <div class="carousel-item text-center">
                 <img src="../assets/img/ropa6.jpeg" alt="ropa" width="300px" height="auto" class="img">
             </div>
         </div>
@@ -113,12 +106,12 @@
     </div>
 
             
-    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" sstyle="width: 100px;" >
-        <div class="carousel-inner container border text-center">
+    <div id="carouselExampleIndicators" class="carousel slide mt-4" data-bs-ride="carousel" sstyle="width: 100px;" >
+        <div class="carousel-inner text-center">
             <div class="carousel-item active">
                 <img src="../assets/img/logos.jpg" alt="ropa" width="500px" height="auto" class="img">
             </div>
-            <div class="carousel-item container border text-center">
+            <div class="carousel-item text-center">
                 <img src="../assets/img/logos2.jpg"  alt="ropa" width="500px" height="auto" class="img">
             </div>
             
@@ -140,12 +133,12 @@
           <div class="col-md-12 mt-3 text-center text-md-center ">
               <nav>
                   <ul class="list-inline">
-                      <li class="list-inline-item"><a class="text-decoration-none text-black"href="#">Inicio</a></li>
-                      <li class="list-inline-item"><a class="text-decoration-none text-black"  href="#">Contacto</a></li>
-                      <li class="list-inline-item"><a class="text-decoration-none text-black"  href="#">Acerca de Nosotros</a></li>
-                      <li class="list-inline-item"><a class="text-decoration-none text-black"  href="#">Catálogo</a></li>
-                      <li class="list-inline-item"><a class="text-decoration-none text-black"  href="#">Preguntas Frecuentes</a></li>
-                      <li class="list-inline-item"><a class="text-decoration-none text-black"  href="#">Política de privacidad</a></li>
+                      <li class="list-inline-item"><a class="text-decoration-none text-black"href="./inicio.html">Inicio</a></li>
+                      <li class="list-inline-item"><a class="text-decoration-none text-black"  href="../contacto/contacto.html">Contacto</a></li>
+                      <li class="list-inline-item"><a class="text-decoration-none text-black"  href="../index.html">Acerca de Nosotros</a></li>
+                      <li class="list-inline-item"><a class="text-decoration-none text-black"  href="../products/productos.html">Productos</a></li>
+                      <li class="list-inline-item"><a class="text-decoration-none text-black"  href="../faq/faq.html">Preguntas Frecuentes</a></li>
+                      <li class="list-inline-item"><a class="text-decoration-none text-black"  href="../aviso-privacidad/aviso-privacidad.html">Política de privacidad</a></li>
                   </ul>
               </nav>
           </div>

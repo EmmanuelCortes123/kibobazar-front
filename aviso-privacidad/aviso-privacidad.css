@@ -1,0 +1,27 @@
+:root{
+    --color_background:#F9F8FF;
+    --color_heFoo:#CAC9F2;
+    --color_buttons:#7A88F2;
+    --color_input:#DBEFFB;
+}
+
+h1{
+    font-family: "Caveat Brush", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+}
+
+section {
+    text-align: justify;
+}
+
+.underline-text {
+    text-decoration: underline;
+}

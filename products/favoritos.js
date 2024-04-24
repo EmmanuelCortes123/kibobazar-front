@@ -1,17 +1,16 @@
-const btnsFavorite = document.querySelectorAll('.favorite');
-const products = document.querySelectorAll('.card-product');
-const counterFavorites = document.querySelector('.counter-favorite');
-
 
 
 
 
 // Arreglo global que contendrá los productos
 
+let carrit= JSON.parse(localStorage.getItem("carrito")) || [];
 
 function inicializarProductos() {
   renderizarProductosFavoritos(); // Solo renderiza los productos existentes en Local Storage al inicializar
 }
+
+
 
 
 
@@ -35,13 +34,18 @@ document.addEventListener('DOMContentLoaded', () => {
 	   
 	let favoritoos=JSON.parse(localStorage.getItem('favorite') )|| [];
 	
-	  /////
+	  let ppp=indice;
 	  favoritoos.forEach((favoritoo,indice)=>{
 		
 
 		console.log(favoritoo);
 		if(producto.nombre === favoritoo.name){
 			console.log("si jala");
+			let carritto=String(favoritoo.name);
+			console.log(carritto+" jejejejejejejejej");
+			console.log(typeof(carritto)+"pruebaaaaa11111");
+			console.log(typeof(indice)+"prueba22222222");
+
 			const tarjetaProducto = `
 			<div class="col-sm-4 mb-4">
 			  <div class="card">
@@ -69,7 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
 										id="added-favorite"
 									></i>
 								</button>
-								<button class="cart">
+								<button onclick="agCarrito(${ppp})" class="cart">
 									<i class="fa-solid fa-bag-shopping" <abbr title="Agregar a la bolsa"></abbr> </i>
 									
 								</button>
@@ -89,6 +93,59 @@ document.addEventListener('DOMContentLoaded', () => {
      });
   }
 
+  const updateCarritoInLocalStorage = () => {
+    localStorage.setItem('carrito', JSON.stringify(carrit));
+  };
+
+//-----------------------------------------AGREGAR DESDE FAVORITOS A CARRITO-------------------------------
+  const agregarCarr=(fav)=>{
+	const index= carrit.findIndex(
+	  element => element.name === fav.name
+	);
+  
+	console.log("el resultado de la prueba es"+index);
+	if (index > -1) {
+	  carrit.splice(index, 1);
+	  updateCarritoInLocalStorage();
+	} else {
+	  carrit.push(fav);
+	  updateCarritoInLocalStorage();
+	}
+ 
+  };
+ /* window.agCarrito = (ppp) => {
+	let productos = JSON.parse(localStorage.getItem('productos')) || [];
+	let palab= productos[ppp].nombre;
+	console.log(" el numero de agCarrito es"+palab);
+	console.log(typeof(palab));
+	let fav={
+	  name:palab,
+	};
+	agregarCarr(fav);
+	renderizarProductos(); // Re-renderiza los productos después de borrar
+  };   */
+
+  window.agCarrito = (indice) => {
+	let productos = JSON.parse(localStorage.getItem('productos')) || [];
+	let nombreProducto = productos[indice].nombre;
+  
+	// Agregar el producto al carrito
+	let fav = {
+	  name: nombreProducto,
+	};
+	agregarCarr(fav);
+  
+	// Mostrar la alerta
+	alert(`¡"${nombreProducto}" ha sido agregado al carrito!`);
+  
+	renderizarProductos(); // Re-renderiza los productos después de borrar
+  };
+
+ //-------------------------------------AGREGAR DESDE FAVORITOS A CARRITO----------------------------------------
+
+
+ 
+ 
  // BORRA LOS ELEMENTOS QUE YA NO ME GUSTAN
   window.borrarProducto = (indice) => {
     let favorit = JSON.parse(localStorage.getItem('favorite')) || [];
@@ -100,6 +157,4 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Llama a renderizarProductos al cargar la página
   renderizarProductosFavoritos();
-});
-
-
+}); 

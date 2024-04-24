@@ -9,11 +9,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
-    <title>Iniciar sesión</title>
+    <link rel="stylesheet" href="./login.css">
+    <title>Página de contacto</title>
 </head>
 <body>
     
-    <header>
+   <header>
         <div class="row">
           <div class="col-md-12 col-12" style="background-color: #CAC9F2;">
             <div class="col-md-12 mt-3 text-end text-md-end" style="background-color: #CAC9F2;">
@@ -21,11 +22,11 @@
                 <img class="iconos m-2" src="../assets/img/icono-login.png" width="25" height="25">
                 </img>
               </a>
-              <a class="icon-link col-md" href="#">
+              <a class="icon-link col-md" href="../products/carrito.html">
                 <img class="iconos m-2" src="../assets/img/carrito.png" width="25" height="25">
               </img>
               </a>
-              <a class="icon-link" href="#">
+              <a class="icon-link" aria-current="page" href="../products/favoritos.html">
                 <img class="iconos m-2" src="../assets/img/fav.png" width="25" height="25">
               </a>
           </div>
@@ -33,82 +34,106 @@
           <div class="col-md-12 col-12 text-center">
               <img src="../assets/img/logo-kibobazar.png" alt="Logo" height="80" class="d-inline-block align-top">
           </div>
-            <nav class="navbar navbar-expand-md" style="background-color: #CAC9F2;">
-              <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="container-fluid">
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                  <ul class="navbar-nav ms-auto me-auto">
-                    <li class="nav-item">
-                      <a class="nav-link" aria-current="page" href="../home/home.html">HOME</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="../contacto/contacto.html">CONTACT</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="../index.html">ABOUT US</a>
-                    </li>
-                     <li class="nav-item">
-                      <a class="nav-link" href="../formulario/formulario.html">formulario</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                      <a class="nav-link dropdown-toggle" href="../products/products.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        PRODUCTS
-                      </a>
-                      <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Action</a></li>
-                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                        <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="#">Something else here</a></li>
-                      </ul>
-                    </li>
-                  </ul>
-                  <form class="d-flex position-static" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-light" style="background-color: #7A88F2;" type="submit">Search</button>
-                  </form>
+          <nav class="navbar navbar-expand-md" style="background-color: #CAC9F2;">
+            <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="container-fluid">
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto me-auto">
+                  <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="../inicio/inicio.html">INICIO</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="../contacto/contacto.html">CONTACTO</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="../index.html">NOSOTROS</a>
+                  </li>
+                   <li class="nav-item">
+                    <a class="nav-link" href="../formulario/formulario.html">FORMULARIO</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link" href="../products/productos.html">
+                      PRODUCTOS
+                    </a>
+                  </li>
+                  </li>
+                </ul>
+          
+                <form class="d-flex position-static" role="Buscador">
+                  <input class="form-control me-2" type="Buscador" placeholder="Buscador" aria-label="Buscador">
+                  <button class="btn btn-outline-light" style="background-color: #7A88F2;" type="submit">Buscar</button>
+                </form>
                 </div>
               </div>
             </nav>
         </div>
       </header>
- <h2>Iniciar sesión</h2>
-    <form id="loginForm">
-        <label for="username">Nombre de usuario:</label>
-        <input type="text" id="username" required><br><br>
-        <label for="password">Contraseña:</label>
-        <input type="password" id="password" required><br><br>
-        <button type="submit">Iniciar sesión</button>
-        
-    </form>
 
-    <div id="userInfo" style="display: none;">
-        <h2>Bienvenido, <span id="loggedInUser"></span>!</h2>
-        
-  <span id="loggedInUser"></span>
-  <button id="logoutButton">Cerrar sesión</button>
-    </div>
+      <main class="container mt-5">
+        <div class="row justify-content-center text-center">
+          <div class="col-md-12">
+            <form id="loginForm" class="row g-2 justify-content-center">
+              <div class="col-6 img-fluid">
+                <img class="imgForm col-md-6 d-none d-md-block" src="../assets/img/RopaBazar.jpg">
+              </div>
+              <div class="col-md-7 col-lg-5 col-xl-5 offset-xl-1 align-items-center">
+                <form>
+                  <!-- Email input -->
+                  <div class="form-outline mb-4">
+                    <label class="form-label" for="form1Example13">Email address</label>
+                    <input type="email" id="username" class="form-control inpu form-control-lg text-center"
+                      placeholder="email@hotmail.com" requiered />
+                  </div>
+      
+                  <!-- Password input -->
+                  <div class="form-outline mb-4">
+                    <label class="form-label" for="form1Example23">Password</label>
+                    <input type="password" id="password" class="form-control inpu form-control-lg text-center"
+                      placeholder="PASSWORD" requiered />
+                  </div>
+      
+                  <div class="d-flex justify-content-around align-items-center mb-4">
+                    <!-- Checkbox -->
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="" id="form1Example3" checked />
+                      <label class="form-check-label" for="form1Example3"> Mantener sesión iniciada </label>
+                    </div>
+                    <a href="#!">Olvidaste tu contraseña?</a>
+                  </div>
+      
+                  <!-- Submit button -->
+                  <button type="submit" class="btn btn-primary btn-lg my-2" style="background-color: #7A88F2;">INICIAR
+                    SESION</button>
+                  <a href="../registro/registro.html" class="btn btn-primary btn-lg my-2" style="background-color: #7A88F2;">CREAR CUENTA</a> <!-- cambie la etiqueta para redireccionar -->
+                  <button type="button" id="logoutButton" class="btn btn-primary btn-lg my-2"
+                    style="background-color: #7A88F2;">CERRAR SESIÓN</button>
+                </form>
+                <div id="userInfo" style="display: none;">
+                  <h3>Bienvenido, <span id="loggedInUser"></span>!</h3>
+                  <span id="loggedInUser"></span>
+                </div>
+              </div>
+          </div>
+      </main>
 
-    
-
-
-
-    <script src="./login.js"></script>
-
+      <script src="./login.js"></script>
 </body>
+
+
 <footer class="footer text-dark mt-4 " style="background-color: #CAC9F2;">
   <div class="container ">
       <div class="row">
           <div class="col-md-12 mt-3 text-center text-md-center ">
               <nav>
                   <ul class="list-inline">
-                      <li class="list-inline-item"><a class="text-decoration-none text-black"href="#">Home</a></li>
-                      <li class="list-inline-item"><a class="text-decoration-none text-black"  href="#">Contacto</a></li>
-                      <li class="list-inline-item"><a class="text-decoration-none text-black"  href="#">Acerca de Nosotros</a></li>
-                      <li class="list-inline-item"><a class="text-decoration-none text-black"  href="#">Catálogo</a></li>
-                      <li class="list-inline-item"><a class="text-decoration-none text-black"  href="#">Preguntas Frecuentes</a></li>
-                      <li class="list-inline-item"><a class="text-decoration-none text-black"  href="#">Política de privacidad</a></li>
+                      <li class="list-inline-item"><a class="text-decoration-none text-black" href="../inicio/inicio.html">Home</a></li>
+                      <li class="list-inline-item"><a class="text-decoration-none text-black"  href="../contacto/contacto.html">Contacto</a></li>
+                      <li class="list-inline-item"><a class="text-decoration-none text-black"  href="../index.html">Acerca de Nosotros</a></li>
+                      <li class="list-inline-item"><a class="text-decoration-none text-black"  href="../products/productos.html">Productos</a></li>
+                      <li class="list-inline-item"><a class="text-decoration-none text-black"  href="../faq/faq.html">Preguntas Frecuentes</a></li>
+                      <li class="list-inline-item"><a class="text-decoration-none text-black"  href="../aviso-privacidad/aviso-privacidad.html">Política de privacidad</a></li>
                   </ul>
               </nav>
           </div>

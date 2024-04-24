@@ -1,8 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap');
+* {
+	font-family: "Playfair Display", serif;
+  }
 
+.header,
+.footer {
+  background-color: #cac9f2;
+}
 
-body {
-	font-family: Quicksand;
+.iconos {
+  width: 25px;
+  height: 25px;
 }
 
 .menu-header button {

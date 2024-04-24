@@ -72,7 +72,7 @@ let ejemploDos = crear("Pantalon", "M","Imagen","Tela","Pantalones", "Un bonito 
 
 function eliminarProducto(nombreVariable) {
     // Se establece la variable como null
-    eval(${nombreVariable} = null);
+    eval('${nombreVariable} = null');
     console.log("Producto eliminado exitosamente.");
 }
 
@@ -83,6 +83,7 @@ eliminarProducto("ejemploUno");
 
 console.log("Producto 1 después de eliminar:", ejemploUno);
 console.log("Producto 2 después de eliminar:", ejemploDos);
+
 
 /*
 // Eliminar un producto
