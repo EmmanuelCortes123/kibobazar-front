@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="./inicio.css">
+    <link rel="stylesheet" href="../home/home.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
@@ -13,23 +13,23 @@
 </head>
 <body>
     
-    <header>
-        <div class="row">
-          <div class="col-md-12 col-12" style="background-color: #CAC9F2;">
-            <div class="col-md-12 mt-3 text-end text-md-end" style="background-color: #CAC9F2;">
-              <a class="icon-link col-md text-decoration-none" href="#">
-                <img class="iconos m-2" src="../assets/img/icono-login.png" width="25" height="25">
-                </img>
-              </a>
-              <a class="icon-link col-md" href="#">
-                <img class="iconos m-2" src="../assets/img/carrito.png" width="25" height="25">
-              </img>
-              </a>
-              <a class="icon-link" href="#">
-                <img class="iconos m-2" src="../assets/img/fav.png" width="25" height="25">
-              </a>
-          </div>
-          </div>
+  <header>
+    <div class="row">
+      <div class="col-md-12 col-12" style="background-color: #CAC9F2;">
+        <div class="col-md-12 mt-3 text-end text-md-end" style="background-color: #CAC9F2;">
+          <a class="icon-link col-md text-decoration-none"href="../login/login.html">
+            <img class="iconos m-2" src="../assets/img/icono-login.png" width="25" height="25">
+            </img>
+          </a>
+          <a class="icon-link col-md" href="../products/carrito.html">
+            <img class="iconos m-2" src="../assets/img/carrito.png" width="25" height="25">
+          </img>
+          </a>
+          <a class="icon-link" aria-current="page" href="../products/favoritos.html">
+            <img class="iconos m-2" src="../assets/img/fav.png" width="25" height="25">
+          </a>
+      </div>
+      </div>
           <div class="col-md-12 col-12 text-center">
               <img src="../assets/img/logo-kibobazar.png" alt="Logo" height="80" class="d-inline-block align-top">
           </div>
@@ -41,21 +41,22 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                   <ul class="navbar-nav ms-auto me-auto">
                     <li class="nav-item">
-                      <a class="nav-link" aria-current="page" href="../home/home.html">INICIO</a>
+                      <a class="nav-link" aria-current="page" href="./inicio.html">INICIO</a>
                     </li>
                     <li class="nav-item">
                       <a class="nav-link" href="../contacto/contacto.html">CONTACTO</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="./index.html">SOBRE NOSOTROS</a>
+                      <a class="nav-link" href="../index.html">NOSOTROS</a>
                     </li>
                      <li class="nav-item">
                       <a class="nav-link" href="../formulario/formulario.html">FORMULARIO</a>
                     </li>
                     <li class="nav-item dropdown">
-                      <a class="nav-link dropdown-toggle" href="../products/products.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      <a class="nav-link" href="../products/productos.html">
                         PRODUCTOS
                       </a>
+                    </li>
                       <ul class="dropdown-menu">
                         <li><a class="dropdown-item" href="#">Action</a></li>
                         <li><a class="dropdown-item" href="#">Another action</a></li>
