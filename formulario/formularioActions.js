@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 // // Arreglo global que contendrá los productos
 // let publicaciones = JSON.parse(localStorage.getItem("productos")) || [];
 
@@ -336,7 +334,6 @@
 // }
 
 
->>>>>>> 89d6258180d3e4e4750f70973c817ab6792c0a41
 // Arreglo global que contendrá los productos
 let publicaciones = JSON.parse(localStorage.getItem("productos")) || [];
 let favorit = JSON.parse(localStorage.getItem("favorite")) || [];
