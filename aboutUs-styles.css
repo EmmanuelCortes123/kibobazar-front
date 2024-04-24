@@ -5,6 +5,13 @@
     --color_input:#DBEFFB;
 }
 
+* {
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+}
+
 .img-profile{
     height: 100px;
     width: 100px;
@@ -14,12 +21,6 @@ a{
     text-decoration: none;
 }
 
-h1, h3, p, a{
-    font-family: "Playfair Display", serif;
-    font-optical-sizing: auto;
-    font-weight: weight;
-    font-style: normal;
-}
 
 .description{
     text-align: justify;
