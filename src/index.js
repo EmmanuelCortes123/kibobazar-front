@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+import 'bootstrap/js/dist/carousel';
 import './styles/AboutUs.css';
 import './styles/Contact.css';
 import './styles/Home.css';

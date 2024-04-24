@@ -1,0 +1,14 @@
+.jumbotron-custom {
+    height: 400px; /* Altura deseada del jumbotron */
+    display: flex;
+    align-items: center; /* Centra verticalmente el contenido */
+    background-image: url('../img/outfit.jpg'); /* Ruta de la imagen de fondo */
+    background-size: cover; /* Ajusta el tamaño de la imagen para que cubra todo el jumbotron */
+    background-position: center; /* Centra la imagen en el jumbotron */
+    color: white; /* Cambia el color del texto para que sea legible sobre la imagen */
+  }
+  
+  .jumbotron-custom .container {
+    max-width: 800px; /* Ancho máximo del contenido del jumbotron */
+    margin: auto; /* Centra horizontalmente el contenido */
+  }
