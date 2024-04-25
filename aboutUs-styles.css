@@ -45,3 +45,11 @@ a{
     width: 25px;
     height: 25px;
 }
+
+.icon-text {
+    display: none;
+  }
+  
+  .icon-link:hover .icon-text {
+    display: inline-block;
+  }

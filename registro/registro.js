@@ -14,6 +14,12 @@ document.addEventListener("DOMContentLoaded", function () {
             return;
         }
 
+         // Validar que la contraseña tenga al menos 6 caracteres (por ejemplo)
+  if (contrasena.length < 6) {
+    alert("La contraseña debe tener al menos 6 caracteres.");
+    return; // Salir de la función si la contraseña no cumple con los requisitos
+  }
+
         if (nombre === "" || apellido === "" || correo === "" || celular === "" || contrasena === "" || confirmarContrasena === "") {
             document.getElementById("alerta").style.display = "block";
             return;
