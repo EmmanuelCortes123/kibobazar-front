@@ -163,7 +163,7 @@ loginForm.addEventListener("submit", function (event) {
 
   // Redirigir al home después de 2 segundos
   setTimeout(function () {
-    window.location.href = "../home/home.html"; // Cambia "home.html" por la URL de tu página de inicio
+    window.location.href = "../inicio/inicio.html"; // Cambia "home.html" por la URL de tu página de inicio
   }, 2000); // 2000 milisegundos = 2 segundos
 });
 
