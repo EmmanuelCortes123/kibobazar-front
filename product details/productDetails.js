@@ -703,16 +703,35 @@ document.addEventListener('DOMContentLoaded', () => {
   console.log("Doceavo paso");
 });
 */
-
+let detalles = JSON.parse(localStorage.getItem("detalles")) || [];
+let productos = JSON.parse(localStorage.getItem('productos')) || [];
 function inicializarProductos() {
   console.log("Treceavo paso");
   renderizarProductDetails(); // Solo renderiza los productos existentes en Local Storage al inicializar
   console.log("Catorceavo paso");
 }
+const updateDetallesInLocalStorage = () => {
+  localStorage.setItem('detalles', JSON.stringify(detalles));
+};
 
 document.addEventListener("DOMContentLoaded", inicializarProductos);
 
 document.addEventListener('DOMContentLoaded', () => {
+  function generarNumerosAleatorios() {
+    var arreglo = [];
+    
+    // Generar números aleatorios únicos
+    while (arreglo.length < 3) {
+        var numeroAleatorio = Math.floor(Math.random() * (productos.length)); // Genera números entre 0 y 10
+        
+        // Verificar si el número generado ya está en el arreglo
+        if (arreglo.indexOf(numeroAleatorio) === -1  && arreglo.indexOf(numeroAleatorio)!= detalles[0].id) {
+            arreglo.push(numeroAleatorio);
+        }
+    }
+    
+    return arreglo;
+  }
   console.log("Primer paso");
   const contenedorProductos = document.getElementById('contenedorProductos');
   console.log("Segundo paso");
@@ -739,33 +758,119 @@ document.addEventListener('DOMContentLoaded', () => {
     <div class="col-12 col-lg-6">
         <img src="${productos[deta].imagen}" class="m-1 w-100 sliderMainImage" data-bs-toggle="modal"
              data-bs-target="#imageModal"/>
-        <div>
-            <img src="../assets/img/ropa2.jpeg" width="60" class="m-1 sliderThumb"/>
-            <img src="../assets/img/ropa3.jpeg" width="60" class="m-1 sliderThumb"/>
-        </div>
+        
     </div>
+    <style>
+            .Info {
+              display: flex;
+            }
+
+            .t1{
+              margin: 0px 5px;
+
+            }
+            .t2{
+              margin: 00px 25px;
+              
+            }
+        </style>
     <div class="col-12 col-lg-6">
-        <h1 class="mb-4">Detalles de compra</h1>
-        <h5 class="mb-4"><strong> ${productos[deta].precio} MXN</strong></h5>
+        <h1 class="mb-4" ><strong>${productos[deta].nombre}</strong></h1>
+        <h2 class="mb-4">${productos[deta].categoria}</h2>
+        <h3 class="mb-4">Material : ${productos[deta].material}</h3>
+        <div class="Info">
+        <h6 class="t1 mb-4">Talla: ${productos[deta].tallas}</h4>
+        <h6 class="t2 mb-4">Medidas: ${productos[deta].medidas}</h4>
+        </div>
+        <h5 class="mb-4" ><strong> ${productos[deta].precio} MXN</strong></h5>
         <p class="mb-2">${productos[deta].descripcion}.</p>
-        <h6><small class="text-muted">by Dior</small></h6>
 
         <div class="d-grid gap-2">
             <button type="button" class="btn btn-outline-light  btn-primary mt-5"
                     style="background-color: #7A88F2;">Agregar a tu carrito
             </button>
         </div>
+        <div class="d-grid gap-2">
+            <button type="button" class="btn btn-outline-light  btn-primary mt-5"
+                    style="background-color: #pink;">Agregar a favoritos
+            </button>
+        </div>
     </div>
 </div>
+
+
+
+<div class="recomendations">
+            <h4> TE RECOMENDAMOS LOS SIGUIENTES PRODUCTOS </h4>
+
+</div>
 `;
+ contenedorProductos.innerHTML = tarjetaProducto;
 
  
-    contenedorProductos.innerHTML = tarjetaProducto;
+
+// Ejemplo de uso
+var numeros = generarNumerosAleatorios();
+console.log(numeros);
+
+for(let i=0; i<3; i++){
+  const tarjetaSuger = `
+  <div class="col-sm-4 mb-4">
+ 
+  
+ 
+  <div class="card" >
+  <a class="image-link" href="../product details/productDetails.html" >
+  <button onclick ="funcDetallesImpl(${numeros[i]})"> 
+  <img src="${productos[numeros[i]].imagen}" class="card-img-top" alt="${productos[numeros[i]].nombre}">
+  </button>
+  </a>
+  <div class="card-body">
+    <h5 class="card-title">${productos[numeros[i]].nombre}</h5>
+    <p class="card-text">${productos[numeros[i]].descripcion}</p>
+    <p class="card-text">${productos[numeros[i]].categoria}</p>
+    <p class="card-text">${productos[numeros[i]].material}</p>
+    <p class="card-text">${productos[numeros[i]].medidas}</p>
+    <p class="card-text">${productos[numeros[i]].tallas}</p>
+    <p class="card-text">${productos[numeros[i]].precio}</p>
+    
+       
+        
+ 
+        
+ 
+  
+      
+    </div>
+  </div>`;
+  contenedorProductos.innerHTML += tarjetaSuger;
+
+
+}
+
+
+
 
 
 
   }
 
+
+  window.funcDetallesImpl=(indice)=>{
+    let det={
+      id:indice,
+    };
+  // borra el local storage de detalles
+    detalles.splice(0,1);
+    // falta funcion hacerla
+    // actualiza local storage detalles
+    updateDetallesInLocalStorage();
+  // agrega el valor del indice a detalles en localstorage
+    detalles.push(det);
+    // actualiza el local
+    updateDetallesInLocalStorage();
+  
+  };
   // Agregar al carrito
   window.agregarAlCarrito = (indice) => {
     let productos = JSON.parse(localStorage.getItem('productos')) || [];

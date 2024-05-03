@@ -544,7 +544,7 @@ function renderizarProductos() {
     <div class="card-body">
       <h5 class="card-title">${producto.nombre}</h5>
       <p class="card-text">${producto.descripcion}</p>
-      <p class="card-text">Precio: ${producto.precio}</p>
+      <p class="card-text">${producto.precio}MXN</p>
     </div>
     <div class="card-footer">
       <button onclick="borrarProducto(${indice})" class="btn btn-danger">Eliminar</button>
@@ -618,15 +618,7 @@ document.addEventListener('DOMContentLoaded', () => {
           <p class="card-text">${producto.material}</p>
           <p class="card-text">${producto.medidas}</p>
           <p class="card-text">${producto.tallas}</p>
-          <p class="card-text">${producto.precio}</p>
-       
-
-     
-
-          
-
-
-
+          <p class="card-text">${producto.precio} MXN</p>
 
               <div class="container-buttons-card">
 
