@@ -49,7 +49,7 @@ h1{
 
 .card {
   position: relative;
-  overflow: hidden;
+  overflow: relative;
 }
 
 .overlay {

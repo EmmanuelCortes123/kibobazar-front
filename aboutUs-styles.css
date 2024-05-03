@@ -57,7 +57,7 @@ a{
 }
 
 .iconos {
-    width: 25px;
+    width: 205px;
     height: 25px;
 }
 
@@ -68,3 +68,5 @@ a{
   .icon-link:hover .icon-text {
     display: inline-block;
   }
+
+  

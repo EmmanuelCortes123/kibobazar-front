@@ -112,12 +112,14 @@
 	background: none;
 	outline: none;
 	cursor: pointer;
-	box-shadow: 0px 0px 15px #00000025;
+	box-shadow: 0px 0px 20px #00000025;
 	width: 40px;
 	height: 40px;
 	border-radius: 50%;
-	font-size: 18px;
+	font-size: 5px;
+	
 }
+    
 
 /* ********************************** */
 /*         LISTA DE FAVORITOS         */
