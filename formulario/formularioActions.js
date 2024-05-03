@@ -584,6 +584,13 @@ document.addEventListener("DOMContentLoaded", inicializarProductos);
 
 
 document.addEventListener('DOMContentLoaded', () => {
+
+  const mensajeECarrito = document.getElementById("eliminadoCarrito");
+  const mensajeACarrito = document.getElementById("agregadoCarrito");
+  const mensajeEFavorito = document.getElementById("eliminadoFavorito");
+  const mensajeAFavorito = document.getElementById("agregadoFavorito");
+
+
   const contenedorProductos = document.getElementById('contenedorProductos');
   
   // Función para renderizar los productos
@@ -676,14 +683,33 @@ document.addEventListener('DOMContentLoaded', () => {
       element => element.name === favo.name
     );
 
+    function mensajeDespuesDeSeisSegundos(index) {
+      setTimeout(function() {
+        if(index== -1){
+          mensajeAFavorito.style.display = "none";
+          console.log("ya pasaron 6 segundos");
+        }else{
+          mensajeEFavorito.style.display = "none";
+          console.log("ya pasaron 6 segundos de que se elimino");
+        }
+          
+      }, 6000); // 6000 milisegundos = 6 segundos
+  }
+
     console.log("el resultado de la prueba es"+index);
     if (index > -1) {
       favorit.splice(index, 1);
-      alert(`¡"${favo.name}" ha sido eliminado de favoritos`);
+      mensajeEFavorito.style.display = "block";
+      mensajeAFavorito.style.display = "none";
+    //  alert(`¡"${favo.name}" ha sido eliminado de favoritos`);
       updateFavoritesInLocalStorage();
+      mensajeDespuesDeSeisSegundos(index);
     } else {
+      mensajeDespuesDeSeisSegundos(index) 
       favorit.push(favo);
-      alert(`¡"${favo.name}" ha sido agregado del favoritos`);
+      mensajeEFavorito.style.display = "none";
+      mensajeAFavorito.style.display = "block";
+     // alert(`¡"${favo.name}" ha sido agregado del favoritos`);
       updateFavoritesInLocalStorage();
     }
 
@@ -730,16 +756,43 @@ const agregarCarr=(fav)=>{
     element => element.name === fav.name
   );
 
+  // FUNCION DE TIEMPO
+ function mensajeDespuesDeSeisSegundos(index) {
+    setTimeout(function() {
+      if(index== -1){
+        mensajeACarrito.style.display = "none";
+        console.log("ya pasaron 6 segundos");
+      }else{
+        mensajeECarrito.style.display = "none";
+        console.log("ya pasaron 6 segundos de que se elimino");
+      }
+        
+    }, 6000); // 6000 milisegundos = 6 segundos
+}
+
+  
+
   console.log("el resultado de la prueba es"+index);
   if (index > -1) {
     carrit.splice(index, 1);
-    alert(`¡"${fav.name}" ha sido eliminado al carrito!`);
+    // AGREGAR ESTOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+
+    mensajeECarrito.style.display = "block";
+    mensajeACarrito.style.display = "none";
     updateCarritoInLocalStorage();
+    // IMPLEMENTACION DE FUNCION TIEMPO
+    mensajeDespuesDeSeisSegundos(index);
    
   } else {
     carrit.push(fav);
-    alert(`¡"${fav.name}" ha sido agregado del carrito!`);
+    // IMPLEMENTAR FUNCION TIEMPO
+    mensajeDespuesDeSeisSegundos(index);
+    // AGREGAR ESTOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+    mensajeECarrito.style.display = "none";
+    mensajeACarrito.style.display = "block";
     updateCarritoInLocalStorage();
+    
+    
     
   }
 
