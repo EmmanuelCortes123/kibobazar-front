@@ -5,6 +5,18 @@ body{
     font-style: normal;
 }
 
+h1{
+    font-family: 'Caveat Brush', cursive;
+    font-size: 36px;
+} 
+
+
+h2{
+    font-family: 'Caveat Brush', cursive;
+    font-size: 26px;
+
+} 
+
 .inpu{
     background-color: #DBEFFB;
 }

@@ -5,6 +5,12 @@ body {
     font-style: normal;
   }
   
+  h1{
+    font-family: 'Caveat Brush', cursive;
+    font-size: 36px;
+  } 
+
+
   .inpu-form {
     background-color: #dbeffb;
   }
