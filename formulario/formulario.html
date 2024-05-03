@@ -69,8 +69,8 @@
   </header>
 
     <h1 class="text-center mt-4" >Formulario de producto</h1>
-    <p class="text-center mt-4">Formulario de creación y modificación de productos.</p>
-    <div id="alerta" class="alert alert-danger alert-dismissible fade show" role="alert" style="display: none;">
+    <h2 class="text-center mt-4">Formulario de creación y modificación de productos.</h2>
+  <div id="alerta" class="alert alert-danger alert-dismissible fade show" role="alert" style="display: none;">
   <strong>Error:</strong> Por favor, completa todos los campos obligatorios.
   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
 </div>
@@ -81,38 +81,38 @@
 
     <main class="container mt-5">
         <div class="row justify-content-center text-center"> 
-            <div class="col-md-12">
+            <div class="col-md-12 " >
                 <form id="formularioContacto" class="row g-3">
-                    <div class="col-6 img-fluid">
+                    <div class="col-6 img-fluid ">
                         <img class="imgForm col-md-6 d-none d-md-block" src="../assets/img/RopaBazar.jpg">
                     </div>
                     <div class="col-md-6">
                       <form action="/crear-producto" method="post">
                         <div class="row">
                           <div class="col-md-6">
-                            <label for="nombre" class="form-label">Nombre</label>
-                            <input type="text" class="inpu-form form-control " id="nombre" name="nombre"  >
+                            <label for="nombre" class="form-label" >Nombre</label>
+                            <input type="text" class="inpu-form form-control text-center " id="nombre" name="nombre" placeholder="Prenda ">
                           </div>
                           <div class="col-md-6">
                             <label for="tallas form-label">Tallas</label>
-                            <input type="text" class="inpu-form form-control" id="tallas" name="tallas">
+                            <input type="text" class="inpu-form form-control text-center" id="tallas" name="tallas" placeholder=" S - M - L ">
                           </div>
                         </div>
                         <div class="row my-3">
                           <div class="col-md-6">
                             <label for="imagen"  class="form-label">Imagen</label>
-                            <input type="TEXT" class="form-control" id="imagen" name="imagen">
+                            <input type="TEXT" class="form-control text-center" id="imagen" name="imagen" placeholder="Ingresar imagen">
                           </div>
                           <div class="col-md-6">
                             <label for="material" class="form-label">Material</label>
-                            <input type="text" class="inpu-form form-control" id="material" name="material">
+                            <input type="text" class="inpu-form form-control text-center" id="material" name="material" placeholder="Algodón">
                           </div>
                         </div>
                         <div class="row my-3">
                           <div class="col-md-6">
                             <label for="categoria"  class="form-label">Categoría</label>
                             <select class="form-select" id="categoria" name="categoria">
-                              <option value="">Seleccionar...</option>
+                              <option class="text-center" value="">Seleccionar...</option>
                               <option value="mujer">Mujer</option>
                               <option value="hombre">Hombre</option>
                               <option value="niño">Niño</option>
@@ -120,20 +120,20 @@
                           </div>
                           <div class="col-md-6">
                             <label for="descripcion" class="form-label">Descripción del producto</label>
-                            <textarea class="inpu-form form-control" id="descripcion" name="descripcion" rows="3"></textarea>
+                            <textarea class="inpu-form form-control text-center" id="descripcion" name="descripcion" rows="3" placeholder="Ingrese descripción"></textarea>
                           </div>
                         </div>
                         <div class="row my-3">
                           <div class="col-md-6">
                             <label for="medidas" class="form-label">Medidas</label>
-                            <input type="text" class="inpu-form form-control" id="medidas" name="medidas">
+                            <input type="text" class="inpu-form form-control text-center" id="medidas" name="medidas" placeholder="Hombro: 50 cm">
                           </div>
                           <div class="col-md-6">
                             <label for="precio" class="form-label">Precio</label>
-                            <input type="number" class="inpu-form form-control" id="precio" name="precio">
+                            <input type="number" class="inpu-form form-control text-center" id="precio" name="precio" placeholder="Pesos">
                           </div>
                         </div>
-                        <button id="formulario-producto" type="submit" class="btn btn-primary mt-3" >Crear Producto</button>
+                        <button id="formulario-producto" type="submit" class="btn btn-outline-light mt-3" style="background-color: #7A88F2;" >Crear producto</button>
                       </form>
                     </div>
                   </div>

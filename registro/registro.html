@@ -21,11 +21,11 @@
                 <img class="iconos m-2" src="../assets/img/icono-login.png" title="Cuenta" width="25" height="25">
                 </img>
               </a>
-              <a class="icon-link col-md" href="#">
+              <a class="icon-link col-md" href="../products/carrito.html">
                 <img class="iconos m-2" src="../assets/img/carrito.png" title="Compras" width="25" height="25">
               </img>
               </a>
-              <a class="icon-link" href="#">
+              <a class="icon-link" href="../products/favoritos.html">
                 <img class="iconos m-2" src="../assets/img/fav.png" title="Favoritos" width="25" height="25">
               </a>
           </div>
@@ -102,7 +102,7 @@
                           </div>
                           <div class="col-md-6">
                             <label for="celular" class="form-label">Celular</label>
-                            <input type="tel" class="form-control inpu text-center" id="celular" name="celular" placeholder="6677230920" required>
+                            <input type="tel" class="form-control inpu text-center" id="celular" name="celular" placeholder="66 - 772 - 309 - 5520" required>
                           </div>
                         </div>
                         <div class="row my-3">
@@ -110,15 +110,21 @@
                         <div class="row my-3">
                           <div class="col-md-6">
                             <label for="contra" class="form-label">Contraseña</label>
-                            <input type="password" class="form-control inpu text-center" id="contra" name="contra" placeholder="password" required pattern=".{6,}" title="Ingresa una contraseña de mínimo 6 caracteres">
+                            <input type="password" class="form-control inpu text-center" id="contra" name="contra" placeholder="Password" required pattern=".{6,}" title="Ingresa una contraseña de mínimo 6 caracteres">
                           </div>
                           <div class="col-md-6">
                             <label for="confirmar-contra" class="form-label">Confirmar contraseña</label>
-                            <input type="password" class="form-control inpu text-center" id="confirmar-contra" name="confirmar-contra" placeholder="password" required pattern=".{6,}" title="Ingresa una contraseña de mínimo 6 caracteres">
+                            <input type="password" class="form-control inpu text-center" id="confirmar-contra" name="confirmar-contra" placeholder="Password" required pattern=".{6,}" title="Ingresa una contraseña de mínimo 6 caracteres">
                           </div>
                         </div>
-                        <button id="formularioRegistro" type="submit" class="btn btn-primary btn-lg my-2" >Crear cuenta</button>
-                        <a href="../login/login.html" class="btn btn-primary btn-lg my-2" style="background-color: #7A88F2;">Iniciar sesión</a> <!-- agregue boton para redireccionar al login-->
+                        <div class="row">
+                          <div class="col">
+                            <button id="formularioRegistro" type="submit" class="btn btn-outline-light m-2" style="background-color: #7A88F2;">Crear cuenta</button>
+                          </div>
+                          <div class="col">
+                            <a href="../login/login.html" class="btn btn-outline-light m-2" style="background-color: #7A88F2;">Iniciar sesión</a> <!-- agregue boton para redireccionar al login-->
+                          </div>
+                        </div>
                       </form>
                     </div>
                   </div>

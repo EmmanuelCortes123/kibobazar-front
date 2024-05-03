@@ -7,10 +7,25 @@
 
 * {
     font-family: "Playfair Display", serif;
+    font-size: 16px;
     font-optical-sizing: auto;
     font-weight: weight;
     font-style: normal;
 }
+
+h1{
+    font-family: 'Caveat Brush', cursive;
+    font-size: 36px;
+} 
+
+h3{
+    font-family: 'Caveat Brush', cursive;
+    font-size: 26px;
+
+} 
+
+
+
 
 .img-profile{
     height: 100px;

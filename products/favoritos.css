@@ -1,6 +1,17 @@
-* {
-	font-family: "Playfair Display", serif;
-  }
+*{
+    font-family: 'Playfair Display', sans-serif;
+    font-size: 16px;
+    
+}
+
+.titulo{
+    font-family: 'Caveat Brush', cursive;
+    font-size: 36px;
+} 
+
+
+
+
 
 .header,
 .footer {

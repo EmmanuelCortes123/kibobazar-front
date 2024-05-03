@@ -48,16 +48,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
 			const tarjetaProducto = `
 			<div class="col-sm-4 mb-4">
-			  <div class="card">
-				<img src="${producto.imagen}" class="card-img-top" alt="${producto.nombre}">
-				<div class="card-body">
-				  <h5 class="card-title">${producto.nombre}</h5>
-				  <p class="card-text">${producto.descripcion}</p>
-				  <p class="card-text">${producto.categoria}</p>
-				  <p class="card-text">${producto.material}</p>
-				  <p class="card-text">${producto.medidas}</p>
-				  <p class="card-text">${producto.tallas}</p>
-				  <p class="card-text">${producto.precio}</p>
+          <div class="card">
+            <img src="${producto.imagen}" class="card-img-top" alt="${producto.nombre}">
+            <div class="card-body">
+              <h5 class="card-title text-center">${producto.nombre}</h5>
+              <hr>
+              <p class="card-text text-center">${producto.descripcion}</p>
+              <hr>
+              <ul class="list-unstyled mb-3">
+                <li><strong>Categoría:</strong> ${producto.categoria}</li>
+                <li><strong>Material:</strong> ${producto.material}</li>
+                <li><strong>Medidas:</strong> ${producto.medidas}</li>
+                <li><strong>Tallas:</strong> ${producto.tallas}</li>
+              <li><strong>Precio:</strong> ${producto.precio}</p>
+              </ul>
 				
 				  
 				  <div class="container-buttons-card">
