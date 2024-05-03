@@ -89,12 +89,12 @@ document.addEventListener('DOMContentLoaded', () => {
         <p class="mb-2">${productos[deta].descripcion}.</p>
 
         <div class="d-grid gap-2">
-            <button onclick= "agCarrito(${0})" type="button" class="btn btn-outline-light  btn-primary mt-5"
+            <button onclick= "agCarrito(${deta})" type="button" class="btn btn-outline-light  btn-primary mt-5"
                     style="background-color: #7A88F2;">Agregar a tu carrito
             </button>
         </div>
         <div class="d-grid gap-2">
-            <button onclick= "agFavorito(${0})" type="button" class="btn btn-outline-light  btn-primary mt-5"
+            <button onclick= "agFavorito(${deta})" type="button" class="btn btn-outline-light  btn-primary mt-5"
                     style="background-color: #pink;">Agregar a favoritos
             </button>
         </div>
