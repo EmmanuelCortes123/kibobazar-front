@@ -701,11 +701,11 @@ document.addEventListener('DOMContentLoaded', () => {
       favorit.splice(index, 1);
       mensajeEFavorito.style.display = "block";
       mensajeAFavorito.style.display = "none";
+      mensajeDespuesDeSeisSegundos(index);
     //  alert(`¡"${favo.name}" ha sido eliminado de favoritos`);
       updateFavoritesInLocalStorage();
-      mensajeDespuesDeSeisSegundos(index);
     } else {
-      mensajeDespuesDeSeisSegundos(index) 
+      mensajeDespuesDeSeisSegundos(index);
       favorit.push(favo);
       mensajeEFavorito.style.display = "none";
       mensajeAFavorito.style.display = "block";
