@@ -339,6 +339,10 @@ let publicaciones = JSON.parse(localStorage.getItem("productos")) || [];
 let favorit = JSON.parse(localStorage.getItem("favorite")) || [];
 let carrit= JSON.parse(localStorage.getItem("carrito")) || [];
 
+// DEJAR ESTE EMN LOCALSTORAGE
+let detalles = JSON.parse(localStorage.getItem("detalles")) || [];
+
+
 function inicializarProductos() {
   renderizarProductos(); // Solo renderiza los productos existentes en Local Storage al inicializar
 }
@@ -590,21 +594,36 @@ document.addEventListener('DOMContentLoaded', () => {
     // Limpia el contenedor de productos
     contenedorProductos.innerHTML = '';
     
+    
+
+    // button onclick ="funcDetallesImpl(${indice})"
+// href="../product details/productDetails.html"
     // Itera sobre el array de productos y crea la estructura HTML para cada uno
     productos.forEach((producto, indice) => {
       const tarjetaProducto = `
         <div class="col-sm-4 mb-4">
-          <div class="card">
-            <img src="${producto.imagen}" class="card-img-top" alt="${producto.nombre}">
-            <div class="card-body">
-              <h5 class="card-title">${producto.nombre}</h5>
-              <p class="card-text">${producto.descripcion}</p>
-              <p class="card-text">${producto.categoria}</p>
-              <p class="card-text">${producto.material}</p>
-              <p class="card-text">${producto.medidas}</p>
-              <p class="card-text">${producto.tallas}</p>
-              <p class="card-text">${producto.precio}</p>
-              
+
+        
+
+        <div class="card">
+        <a class="image-link" href="../product details/productDetails.html" >
+        <button onclick ="funcDetallesImpl(${indice})"> 
+        <img src="${producto.imagen}" class="card-img-top" alt="${producto.nombre}">
+        </button>
+        </a>
+        <div class="card-body">
+          <h5 class="card-title">${producto.nombre}</h5>
+          <p class="card-text">${producto.descripcion}</p>
+          <p class="card-text">${producto.categoria}</p>
+          <p class="card-text">${producto.material}</p>
+          <p class="card-text">${producto.medidas}</p>
+          <p class="card-text">${producto.tallas}</p>
+          <p class="card-text">${producto.precio}</p>
+       
+
+     
+
+          
 
 
 
@@ -652,6 +671,10 @@ document.addEventListener('DOMContentLoaded', () => {
     localStorage.setItem('carrito', JSON.stringify(carrit));
   };
 
+  const updateDetallesInLocalStorage = () => {
+    localStorage.setItem('detalles', JSON.stringify(detalles));
+  };
+
 
  
   
@@ -664,9 +687,11 @@ document.addEventListener('DOMContentLoaded', () => {
     console.log("el resultado de la prueba es"+index);
     if (index > -1) {
       favorit.splice(index, 1);
+      alert(`¡"${favo.name}" ha sido eliminado de favoritos`);
       updateFavoritesInLocalStorage();
     } else {
       favorit.push(favo);
+      alert(`¡"${favo.name}" ha sido agregado del favoritos`);
       updateFavoritesInLocalStorage();
     }
 
@@ -682,11 +707,29 @@ document.addEventListener('DOMContentLoaded', () => {
     agregarFav(favo);
 
     // Mostrar la alerta
-  alert(`¡"${nombreProducto}" ha sido agregado afavorito!`);
+ 
     renderizarProductos(); // Re-renderiza los productos después de borrar
   };
 
 //----------------------------------------------------------PARTE DE FAVORITOS AGREGAR --------------------------------------------
+
+
+window.funcDetallesImpl=(indice)=>{
+  let det={
+    id:indice,
+  };
+// borra el local storage de detalles
+  detalles.splice(0,1);
+  // falta funcion hacerla
+  // actualiza local storage detalles
+  updateDetallesInLocalStorage();
+// agrega el valor del indice a detalles en localstorage
+  detalles.push(det);
+  // actualiza el local
+  updateDetallesInLocalStorage();
+
+};
+
 
 
 //-------------------------------------------------------- PARTE DE CARRITO AGREGAR ----------------------------------
@@ -698,10 +741,14 @@ const agregarCarr=(fav)=>{
   console.log("el resultado de la prueba es"+index);
   if (index > -1) {
     carrit.splice(index, 1);
+    alert(`¡"${fav.name}" ha sido eliminado al carrito!`);
     updateCarritoInLocalStorage();
+   
   } else {
     carrit.push(fav);
+    alert(`¡"${fav.name}" ha sido agregado del carrito!`);
     updateCarritoInLocalStorage();
+    
   }
 
 };
@@ -716,7 +763,7 @@ window.agCarrito = (indice) => {
   agregarCarr(fav);
 
   // Mostrar la alerta
-  alert(`¡"${nombreProducto}" ha sido agregado al carrito!`);
+  
 
   renderizarProductos(); // Re-renderiza los productos después de borrar
 };
