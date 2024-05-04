@@ -1,3 +1,10 @@
+{
+    font-family: 'Playfair Display', sans-serif;
+    font-size: 16px;
+
+}
+
+
 body{
     font-family: "Playfair Display", serif;
     font-optical-sizing: auto;
@@ -12,9 +19,27 @@ body{
 .btn{
     background-color: #7A88F2;
     border-radius: 7px;
+    border-width: 3px;
 }
 
 .iconos {
     width: 25px;
     height: 25px;
+}
+
+.titulo{
+    font-family: 'Caveat Brush', cursive;
+    font-size: 36px;
+
+}
+
+h1{
+    font-family: 'Caveat Brush', cursive;
+    font-size: 36px;
+} 
+
+h2{
+    font-family: 'Caveat Brush', cursive;
+    font-size: 26px;
+
 }
