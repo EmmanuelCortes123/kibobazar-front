@@ -1,5 +1,4 @@
 
-
 let carrit = JSON.parse(localStorage.getItem("carrito")) || [];
 let favorit = JSON.parse(localStorage.getItem("favorite")) || [];
 let detalles = JSON.parse(localStorage.getItem("detalles")) || [];
@@ -59,53 +58,39 @@ document.addEventListener('DOMContentLoaded', () => {
     const tarjetaProducto = `
     <div class="row py-5 g-5">
     <div class="col-12 col-lg-6">
-        <img src="${productos[deta].imagen}" class="m-1 w-100 sliderMainImage" data-bs-toggle="modal"
+        <img src="${productos[deta].imagen}" class="m-1 w-100 sliderMainImage border border-dark border-3 " data-bs-toggle="modal"
              data-bs-target="#imageModal"/>
-        
     </div>
-    <style>
-            .Info {
-              display: flex;
-            }
+    
+        <div class="col-12 col-lg-6">
+        <h2 class="mb-4 card-title" ><strong>${productos[deta].nombre}</strong></h2>
+        <hr>
+        <p class="mb-2 card-text">${productos[deta].descripcion}.</p>
+        <hr>
 
-            .t1{
-              margin: 0px 5px;
-
-            }
-            .t2{
-              margin: 00px 25px;
-              
-            }
-        </style>
-    <div class="col-12 col-lg-6">
-        <h1 class="mb-4" ><strong>${productos[deta].nombre}</strong></h1>
-        <h2 class="mb-4">${productos[deta].categoria}</h2>
-        <h3 class="mb-4">Material : ${productos[deta].material}</h3>
+        <h5 class="mb-4 card-title"><strong>Categoría:</strong> ${productos[deta].categoria}</h5>
+        <h5 class="mb-4"><strong>Material:</strong> ${productos[deta].material}</h5>
         <div class="Info">
-        <h6 class="t1 mb-4">Talla: ${productos[deta].tallas}</h4>
-        <h6 class="t2 mb-4">Medidas: ${productos[deta].medidas}</h4>
+        <h6 class="t1 mb-4"><strong>Talla:</strong> ${productos[deta].tallas}</h6>
+        <h6 class="t2 mb-4"><strong>Medidas:</strong> ${productos[deta].medidas}</h6>
         </div>
-        <h5 class="mb-4" ><strong> ${productos[deta].precio} MXN</strong></h5>
-        <p class="mb-2">${productos[deta].descripcion}.</p>
+        <div>
+        <h5 class="mb-4 card-title"><strong>Precio:</strong> ${productos[deta].precio} MXN</h5>
+        </div>
 
-        <div class="d-grid gap-2">
-            <button onclick= "agCarrito(${deta})" type="button" class="btn btn-outline-light  btn-primary mt-5"
-                    style="background-color: #7A88F2;">Agregar a tu carrito
+            <button onclick= "agCarrito(${deta})" type="button" class="btn btn-outline-light m-2"
+              style="background-color: #7A88F2;">Agregar a tu carrito
             </button>
-        </div>
-        <div class="d-grid gap-2">
-            <button onclick= "agFavorito(${deta})" type="button" class="btn btn-outline-light  btn-primary mt-5"
-                    style="background-color: #pink;">Agregar a favoritos
+            <button onclick= "agFavorito(${deta})" type="button" class="btn btn-outline-light m-2"
+             style="background-color: #7A88F2;">Agregar a favoritos
             </button>
-        </div>
     </div>
 </div>
 
 
 
 <div class="recomendations">
-            <h4> TE RECOMENDAMOS LOS SIGUIENTES PRODUCTOS </h4>
-
+    <h1 class=" text-center mt-4 mb-5"> Te recomendamos los siguiente productos  </h1>
 </div>
 `;
  contenedorProductos.innerHTML = tarjetaProducto;
@@ -118,7 +103,7 @@ console.log(numeros);
 
 for(let i=0; i<3; i++){
   const tarjetaSuger = `
-  <div class="col-sm-4 mb-4">
+  <div class="col-sm-4 mt-4 mb-4">
  
   
  
@@ -129,37 +114,26 @@ for(let i=0; i<3; i++){
   </button>
   </a>
   <div class="card-body">
-    <h5 class="card-title">${productos[numeros[i]].nombre}</h5>
-    <p class="card-text">${productos[numeros[i]].descripcion}</p>
-    <p class="card-text">${productos[numeros[i]].categoria}</p>
-    <p class="card-text">${productos[numeros[i]].material}</p>
-    <p class="card-text">${productos[numeros[i]].medidas}</p>
-    <p class="card-text">${productos[numeros[i]].tallas}</p>
-    <p class="card-text">${productos[numeros[i]].precio}</p>
-    
-       
-        
- 
-        
- 
-  
+
+    <h5 class="mb-4 card-title text-center" ><strong>${productos[numeros[i]].nombre}</strong></h5>
+      <hr>
+    <p class="mb-2 card-text text-center">${productos[numeros[i]].descripcion}.</p>
+      <hr>
+    <ul class="list-unstyled mb-3">
+    <p class="card-text"><strong>Categoría:</strong> ${productos[numeros[i]].categoria}</p>
+    <p class="card-text"><strong>Material:</strong> ${productos[numeros[i]].material}</p>
+    <p class="card-text"><strong>Medidas:</strong> ${productos[numeros[i]].medidas}</p>
+    <p class="card-text"><strong>Talla:</strong> ${productos[numeros[i]].tallas}</p>
+    <p class="card-text"><strong>Precio:</strong> ${productos[numeros[i]].precio} MXN</p>
+
+    </ul>
       
     </div>
   </div>`;
   contenedorProductos.innerHTML += tarjetaSuger;
 
-
 }
-
-
-
-
-
-
   }
-
-
-
 
   const agregarFav=(favo)=>{
     const index= favorit.findIndex(

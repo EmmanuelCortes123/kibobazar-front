@@ -1,6 +1,24 @@
-* {
-	font-family: "Playfair Display", serif;
-  }
+*{
+    font-family: 'Playfair Display', sans-serif;
+    font-size: 16px;
+}
+
+body{
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+}
+
+h1{
+    font-family: 'Caveat Brush', cursive;
+    font-size: 36px;
+} 
+
+.estiloTitulo{
+    font-family: 'Caveat Brush', cursive;
+    font-size: 20px;
+} 
 
 .header,
 .footer {
@@ -190,13 +208,6 @@
 
 a{
     text-decoration: none;
-}
-
-h1, h3, p, a{
-    font-family: "Playfair Display", serif;
-    font-optical-sizing: auto;
-    font-weight: weight;
-    font-style: normal;
 }
 
 .description{
