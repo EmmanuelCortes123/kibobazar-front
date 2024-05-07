@@ -23,3 +23,20 @@ body {
   width: 25px;
   height: 25px;
 }
+
+
+h1{
+  font-family: 'Caveat Brush', cursive;
+  font-size: 36px;
+} 
+
+h2{
+  font-family: 'Caveat Brush', cursive;
+  font-size: 26px;
+
+} 
+
+h5{
+  font-family: 'Caveat Brush', cursive;
+  font-size: 26px;
+}

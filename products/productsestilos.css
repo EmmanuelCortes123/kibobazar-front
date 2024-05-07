@@ -1,6 +1,20 @@
 * {
-  font-family: "Playfair Display", serif;
+  font-family: 'Playfair Display', sans-serif;
+  font-size: 16px;
 }
+
+body{
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+}
+
+.titulo{
+  font-family: 'Caveat Brush', cursive;
+  font-size: 36px;
+} 
+
 
 .header,
 .footer {
@@ -11,27 +25,6 @@
   width: 25px;
   height: 25px;
 }
-
-/* .nav-link {
-    color: white;
-}
-
-.nav-link:hover {
-    color: #7A88F2;
-}
-
-.btn-outline-light {
-    background-color: #7A88F2;
-    border-color: #7A88F2;
-}
-
-.btn-outline-light:hover {
-    background-color: white;
-    color: #7A88F2;
-    border-color: #7A88F2;
-} */
-
-/* Agrega más estilos personalizados aquí según sea necesario */
 
 .card {
   position: relative;
