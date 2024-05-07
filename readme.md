@@ -23,5 +23,9 @@ Nuestro equipo está conformado por 9 desarrolladores, donde cada uno de los mie
 - María Frausto ⭐️
 - Michelle Limón ⭐️
 
+Por último, les compartimos el enlace al deploy de nuestro trabajo:
+https://kibobazarv3.netlify.app/inicio/inicio
+
+
 ¡Gracias por revisar nuestro proyecto!
 
